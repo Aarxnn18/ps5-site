@@ -1,15 +1,37 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
   background: #0f0f0f;
-  color: white;
+  color: #eaeaea;
+  line-height: 1.6;
 }
 
+/* Center layout */
+header, main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styling */
 header {
-  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+/* Links */
 a {
   color: #4da3ff;
   text-decoration: none;
@@ -19,6 +41,32 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Article list becomes cards */
 ul {
-  line-height: 1.8;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #1a1a1a;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+li:hover {
+  background: #242424;
+  transform: translateY(-2px);
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  header, main {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
 }
