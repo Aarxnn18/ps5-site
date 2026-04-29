@@ -10,6 +10,8 @@ body {
     background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
+    /* Added overflow-x: hidden to prevent accidental horizontal scrolling on mobile */
+    overflow-x: hidden;
 }
 
 /* --- 2. NAVIGATION & LOGO --- */
@@ -61,6 +63,8 @@ body {
     color: #fff;
     outline: none;
     transition: 0.3s;
+    /* Prevents iOS from zooming in on the input automatically */
+    font-size: 16px; 
 }
 
 #manualSearch:focus {
@@ -68,9 +72,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 112, 209, 0.4);
 }
 
-/* --- 4. HERO SECTION (BLUE PLACEHOLDER GRADIENT) --- */
+/* --- 4. HERO SECTION --- */
 .hero-box {
-    /* This creates a nice blue-to-black gradient as a fallback if the image is missing */
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
                 url('images/hero-bg.jpg'),
                 linear-gradient(135deg, #001a33 0%, #000000 100%);
@@ -87,7 +90,7 @@ body {
 }
 
 .hero-box h1 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Dynamically sizes text based on screen width */
     font-weight: 900;
     margin-bottom: 15px;
     color: #ffffff;
@@ -96,7 +99,7 @@ body {
 }
 
 .hero-box p {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: #0070d1;
     font-weight: 600;
     letter-spacing: 1px;
@@ -108,7 +111,8 @@ body {
     margin: 40px auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* minmax(280px...) ensures boxes don't get too skinny on tiny phones */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 25px;
 }
 
@@ -165,7 +169,7 @@ body {
 .article-content {
     max-width: 800px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 5% 20px; /* Uses percentage for better top/bottom spacing on mobile */
     background-color: #111111;
     border-radius: 12px;
 }
@@ -182,22 +186,6 @@ body {
     font-weight: bold;
     font-size: 0.95rem;
     transition: 0.3s;
-}
-
-.back-link:hover, .next-article-link:hover {
-    text-decoration: underline;
-    color: #ffffff;
-}
-
-.article-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-
-.article-meta {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
 }
 
 /* --- 7. THE FIXED IMAGE SIZING --- */
@@ -250,11 +238,6 @@ body {
     transition: 0.3s;
 }
 
-.interlinking-footer a:hover {
-    color: #0070d1;
-    padding-left: 5px;
-}
-
 /* --- 9. FOOTER --- */
 footer {
     text-align: center;
@@ -265,21 +248,48 @@ footer {
     margin-top: 60px;
 }
 
-/* --- 10. RESPONSIVE --- */
+/* --- 10. RESPONSIVE DESIGN (The Mobile Fixes) --- */
 @media (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
-        gap: 15px;
+        padding: 1.5rem 20px;
+        text-align: center;
     }
+    
     .search-container {
-        margin: 0;
+        margin: 15px 0;
         width: 100%;
     }
-    .hero-box h1 {
-        font-size: 2.2rem;
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
-    .featured-image {
+
+    .nav-links a {
+        margin-left: 0;
+    }
+
+    .hero-box {
         height: 250px;
+    }
+
+    .featured-image {
+        height: 250px; /* Shrinks the article hero image for phone screens */
+    }
+
+    .article-header h1 {
+        font-size: 1.7rem; /* Prevents long titles from breaking the layout */
+    }
+}
+
+/* Added extra small screen fix for very small phones */
+@media (max-width: 480px) {
+    .article-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
 }
 
