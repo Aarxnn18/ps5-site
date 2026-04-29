@@ -1,132 +1,149 @@
-/* --- 1. GLOBAL RESET --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Hardware Manual | PS5 Performance Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #0f1113; /* Deep Dark Background */
-    color: #e0e0e0;
-    overflow-x: hidden;
-}
+    <nav class="nav-bar">
+        <div class="logo-area">📖 THE HARDWARE MANUAL</div>
+        <div class="nav-links">
+            <a href="#buying-guides">BUYING GUIDES</a>
+            <a href="#tutorials">TUTORIALS</a>
+        </div>
+    </nav>
 
-/* --- 2. TOP NAVIGATION --- */
-.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background-color: #16191c;
-    border-bottom: 1px solid #2a2d31;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <header class="hero-box">
+        <h1>PS5 PRO GUIDE</h1>
+        <p>Premium Hardware Reviews & Step-By-Step Tutorials</p>
+    </header>
 
-.logo-area {
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
+    <div class="content-wrapper">
+        
+        <h2 id="buying-guides" class="section-title">Core Buying Guides</h2>
+        
+        <a href="articles/ssd-ps5.html" class="article-box">
+            <img src="images/ssd.jpg" class="box-image" alt="SSD">
+            <div class="box-text">
+                <h3>Best PS5 SSDs (2026)</h3>
+                <p>Expand your storage capacity with the fastest Gen4 NVMe drives available.</p>
+            </div>
+        </a>
 
-.nav-links a {
-    color: #999;
-    text-decoration: none;
-    margin-left: 30px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
-}
+        <a href="articles/ps5-controllers.html" class="article-box">
+            <img src="images/controller.jpg" class="box-image" alt="Controllers">
+            <div class="box-text">
+                <h3>Best PS5 Controllers</h3>
+                <p>From pro-paddles to Hall Effect sticks, find your perfect gaming pad.</p>
+            </div>
+        </a>
 
-.nav-links a:hover {
-    color: #0070d1;
-}
+        <a href="articles/ps5-headsets.html" class="article-box">
+            <img src="images/headset.jpg" class="box-image" alt="Headsets">
+            <div class="box-text">
+                <h3>Best PS5 Headsets</h3>
+                <p>Experience Tempest 3D audio with these top-tier headsets.</p>
+            </div>
+        </a>
 
-/* --- 3. DARKENED HERO BOX --- */
-.hero-box {
-    height: 400px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: 5px solid #0070d1;
-}
+        <a href="articles/best-ps5-monitors.html" class="article-box">
+            <img src="images/monitor.jpg" class="box-image" alt="Monitors">
+            <div class="box-text">
+                <h3>Best PS5 Monitors</h3>
+                <p>The best 4K 120Hz displays for a smooth gaming experience.</p>
+            </div>
+        </a>
 
-.hero-box h1 {
-    font-size: 3.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
+        <a href="articles/psvr2-guide.html" class="article-box">
+            <img src="images/psvr2.jpg" class="box-image" alt="PSVR2">
+            <div class="box-text">
+                <h3>PSVR2 Buying Guide</h3>
+                <p>Essential games and mods for the ultimate VR experience.</p>
+            </div>
+        </a>
 
-/* --- 4. INTERACTIVE ARTICLE BOXES --- */
-.content-wrapper {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
+        <a href="articles/ps5-streaming-gear.html" class="article-box">
+            <img src="images/streaming.jpg" class="box-image" alt="Streaming">
+            <div class="box-text">
+                <h3>Best Streaming Gear</h3>
+                <p>The best cameras and mics for starting your channel.</p>
+            </div>
+        </a>
 
-.section-title {
-    color: #0070d1;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    border-left: 4px solid #0070d1;
-    padding-left: 15px;
-}
+        <a href="articles/best-ps5-hdmi-cables.html" class="article-box">
+            <img src="images/hdmi-cable.jpg" class="box-image" alt="Cables">
+            <div class="box-text">
+                <h3>Best HDMI 2.1 Cables</h3>
+                <p>Ensure your cable can handle 4K 120Hz without signal drops.</p>
+            </div>
+        </a>
 
-.article-box {
-    display: flex; /* Forces Image Left, Text Right */
-    background: #1a1d21;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid #2a2d31;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* The "Pop" animation */
-}
+        <h2 id="tutorials" class="section-title">Step-By-Step Tutorials</h2>
 
-/* THE INTERACTIVE HIGHLIGHT */
-.article-box:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: #0070d1;
-    box-shadow: 0 20px 40px rgba(0, 112, 209, 0.2);
-}
+        <a href="articles/how-to-install-ps5-ssd.html" class="article-box">
+            <img src="images/ssd-install.jpg" class="box-image" alt="SSD Install">
+            <div class="box-text">
+                <h3>How to Install an SSD</h3>
+                <p>A safe, step-by-step guide to installing M.2 storage.</p>
+            </div>
+        </a>
 
-.box-image {
-    width: 320px;
-    height: 220px;
-    object-fit: cover;
-    transition: 0.5s;
-}
+        <a href="articles/how-to-pair-ps5-controller.html" class="article-box">
+            <img src="images/pair-controller.jpg" class="box-image" alt="Controller Fix">
+            <div class="box-text">
+                <h3>Pair & Reset Controllers</h3>
+                <p>Fix sync issues or connect your pad to PC and Mobile.</p>
+            </div>
+        </a>
 
-.article-box:hover .box-image {
-    transform: scale(1.1); /* Zooms image slightly on hover */
-}
+        <a href="articles/how-to-enable-ps5-3d-audio.html" class="article-box">
+            <img src="images/3d-audio.jpg" class="box-image" alt="3D Audio">
+            <div class="box-text">
+                <h3>Enable 3D Audio</h3>
+                <p>Setup instructions for the best spatial sound settings.</p>
+            </div>
+        </a>
 
-.box-text {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+        <a href="articles/how-to-enable-120hz-ps5.html" class="article-box">
+            <img src="images/120hz-setup.jpg" class="box-image" alt="120Hz Fix">
+            <div class="box-text">
+                <h3>Enable 120Hz Mode</h3>
+                <p>How to get the smoothest frame rates on your monitor.</p>
+            </div>
+        </a>
 
-.box-text h3 {
-    color: #fff;
-    font-size: 1.7rem;
-    margin-bottom: 15px;
-}
+        <a href="articles/how-to-setup-psvr2.html" class="article-box">
+            <img src="images/psvr2-setup.jpg" class="box-image" alt="VR Setup">
+            <div class="box-text">
+                <h3>PSVR2 Setup Guide</h3>
+                <p>Calibrate eye-tracking and room-scale play areas.</p>
+            </div>
+        </a>
 
-.box-text p {
-    color: #aaa;
-    font-size: 1.05rem;
-    line-height: 1.6;
-}
+        <a href="articles/how-to-stream.html" class="article-box">
+            <img src="images/stream-setup.jpg" class="box-image" alt="Stream Setup">
+            <div class="box-text">
+                <h3>Start Your First Stream</h3>
+                <p>Link Twitch/YouTube and go live in minutes.</p>
+            </div>
+        </a>
+
+        <a href="articles/how-to-spot-fake-hdmi-21.html" class="article-box">
+            <img src="images/fake-hdmi.jpg" class="box-image" alt="Verify HDMI">
+            <div class="box-text">
+                <h3>Spot Fake HDMI 2.1</h3>
+                <p>Learn how to use the official app to verify your cable's speed.</p>
+            </div>
+        </a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Hardware Manual. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
 
