@@ -1,188 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hardware Manual | PS5 Expert Guides</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- 1. BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <nav class="nav-bar">
-        <div class="logo-area">
-            <span class="logo-icon">📓</span> THE HARDWARE MANUAL
-        </div>
-        
-        <div class="search-container">
-            <input type="text" id="manualSearch" placeholder="Search hardware, features, or keywords..." onkeyup="searchArticles()">
-        </div>
+body {
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#">Guides</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+/* --- 2. NAVIGATION & LOGO --- */
+.nav-bar {
+    background-color: #111111;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <header class="hero-box">
-        <h1>THE HARDWARE MANUAL</h1>
-        <p>Expert Deep Dives & Technical Tutorials</p>
-    </header>
+.logo-area {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    <div class="content-wrapper">
-        
-        <h2 class="section-title">Core Hardware Buying Guides</h2>
-        
-        <a href="articles/ssd-ps5.html" class="article-box" data-keywords="storage nvme expansion memory speed sn850x samsung heatsink">
-            <img src="images/ssd-hero.jpg" class="box-image" alt="Best PS5 SSDs">
-            <div class="box-text">
-                <h3>Best PS5 SSDs: 2026 Performance Analysis</h3>
-                <p>Full in-depth descriptions and real reviews of the fastest Gen4 NVMe drives available for the PS5.</p>
-            </div>
-        </a>
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
 
-        <a href="articles/ps5-controllers.html" class="article-box" data-keywords="dualsense edge stick drift hall effect paddles scuf gaming">
-            <img src="images/controller-hero.jpg" class="box-image" alt="PS5 Pro Controllers">
-            <div class="box-text">
-                <h3>The Definitive PS5 Controller Review</h3>
-                <p>Detailed analysis of Hall Effect sensors and the best pro-tier controllers for competitive play.</p>
-            </div>
-        </a>
+.nav-links a:hover {
+    color: #0070d1;
+}
 
-        <a href="articles/ps5-headsets.html" class="article-box" data-keywords="pulse audio wireless mic spatial surround sound headphones">
-            <img src="images/headset-hero.jpg" class="box-image" alt="PS5 Headsets">
-            <div class="box-text">
-                <h3>3D Audio Masterclass: Best PS5 Headsets</h3>
-                <p>Expert evaluation of Planar Magnetic drivers and the best headsets for Tempest 3D Audio immersion.</p>
-            </div>
-        </a>
+/* --- 3. SEARCH BAR --- */
+.search-container {
+    flex-grow: 1;
+    max-width: 450px;
+    margin: 0 40px;
+}
 
-        <a href="articles/ps5-streaming-gear.html" class="article-box" data-keywords="twitch youtube camera mic elgato broadcast capture">
-            <img src="images/streaming-hero.jpg" class="box-image" alt="Streaming Gear">
-            <div class="box-text">
-                <h3>Best PS5 Streaming Gear: 2026 Creator's Guide</h3>
-                <p>Full hardware breakdown for creators looking for broadcast-quality audio and 4K visuals.</p>
-            </div>
-        </a>
+#manualSearch {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #1a1d21;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
 
-        <a href="articles/best-ps5-monitors.html" class="article-box" data-keywords="screen oled 4k hdr vrr refresh display lg sony samsung">
-            <img src="images/monitor-hero.jpg" class="box-image" alt="Best PS5 Monitors">
-            <div class="box-text">
-                <h3>Best PS5 Monitors: 4K 120Hz & OLED Displays</h3>
-                <p>In-depth reviews of HDMI 2.1 displays and why OLED is the gold standard for response times.</p>
-            </div>
-        </a>
+#manualSearch:focus {
+    border-color: #0070d1;
+    box-shadow: 0 0 10px rgba(0, 112, 209, 0.4);
+}
 
-        <a href="articles/best-ps5-hdmi-cables.html" class="article-box" data-keywords="bandwidth 48gbps 2.1 cable gold black screen flicker">
-            <img src="images/hdmi-hero.jpg" class="box-image" alt="Best HDMI Cables">
-            <div class="box-text">
-                <h3>Best HDMI 2.1 Cables: Preserving Signal Integrity</h3>
-                <p>Why 48Gbps bandwidth is mandatory and which cables actually deliver the performance promised.</p>
-            </div>
-        </a>
+/* --- 4. HERO SECTION --- */
+.hero-box {
+    background-color: #111111;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+}
 
-        <a href="articles/psvr2-guide.html" class="article-box" data-keywords="vr virtual reality headset lenses tracking sense psvr">
-            <img src="images/psvr2-hero.jpg" class="box-image" alt="PSVR2 Buying Guide">
-            <div class="box-text">
-                <h3>PSVR2: Is the Hardware Worth it in 2026?</h3>
-                <p>A technical deep dive into Foveated Rendering and the state of high-end VR hardware.</p>
-            </div>
-        </a>
+.hero-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
 
-        <h2 class="section-title">Technical How-To Tutorials</h2>
+/* --- 5. GRID & HOME PAGE --- */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
 
-        <a href="articles/how-to-enable-120hz-ps5.html" class="article-box" data-keywords="settings performance fps frames lag 120 refresh">
-            <img src="images/120hz-ui.jpg" class="box-image" alt="Enable 120Hz">
-            <div class="box-text">
-                <h3>How to Enable 120Hz on PS5: The Complete Guide</h3>
-                <p>Step-by-step technical walkthrough to unlock high-frame-rate gaming on compatible displays.</p>
-            </div>
-        </a>
+.section-title {
+    grid-column: 1 / -1;
+    border-left: 4px solid #0070d1;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
 
-        <a href="articles/how-to-enable-ps5-3d-audio.html" class="article-box" data-keywords="setup hrtf sound settings calibration speakers headphones">
-            <img src="images/3d-audio-ui.jpg" class="box-image" alt="Enable 3D Audio">
-            <div class="box-text">
-                <h3>How to Optimize Tempest 3D Audio</h3>
-                <p>Guide to calibrating your personal HRTF profile for the most accurate spatial soundstage.</p>
-            </div>
-        </a>
+.article-box {
+    background-color: #111111;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+}
 
-        <a href="articles/how-to-install-ps5-ssd.html" class="article-box" data-keywords="install build upgrade cover screwdriver opening heatsink">
-            <img src="images/install-step.jpg" class="box-image" alt="Install SSD">
-            <div class="box-text">
-                <h3>How to Install an M.2 SSD in Your PS5</h3>
-                <p>Expert hardware installation guide with static safety tips and formatting instructions.</p>
-            </div>
-        </a>
+.article-box:hover {
+    transform: translateY(-5px);
+    border-color: #0070d1;
+}
 
-        <a href="articles/how-to-pair-ps5-controller.html" class="article-box" data-keywords="sync bluetooth reset connect button pairing update">
-            <img src="images/pair-step.jpg" class="box-image" alt="Pair Controller">
-            <div class="box-text">
-                <h3>How to Pair, Reset, and Update DualSense Controllers</h3>
-                <p>Technical steps for syncing to PS5, PC, and performing hard factory resets.</p>
-            </div>
-        </a>
+.box-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-        <a href="articles/how-to-setup-psvr2.html" class="article-box" data-keywords="play area boundary eyes focus tracking setup visibility">
-            <img src="images/psvr2-setup.jpg" class="box-image" alt="PSVR2 Setup">
-            <div class="box-text">
-                <h3>PSVR2 Expert Setup & Room Calibration</h3>
-                <p>How to find the "Sweet Spot" and calibrate eye tracking for peak VR performance.</p>
-            </div>
-        </a>
+.box-text {
+    padding: 20px;
+}
 
-        <a href="articles/how-to-spot-fake-hdmi-21.html" class="article-box" data-keywords="scan app certification genuine fake original real cable">
-            <img src="images/fake-check.jpg" class="box-image" alt="Spot Fake HDMI">
-            <div class="box-text">
-                <h3>How to Identify Counterfeit HDMI 2.1 Cables</h3>
-                <p>Tutorial on using the official HDMI certification app to protect your signal integrity.</p>
-            </div>
-        </a>
+.box-text h3 {
+    margin-bottom: 10px;
+    color: #0070d1;
+}
 
-        <a href="articles/how-to-stream.html" class="article-box" data-keywords="live broadcast online internet setup share settings">
-            <img src="images/stream-menu.jpg" class="box-image" alt="PS5 Streaming">
-            <div class="box-text">
-                <h3>How to Stream Directly From PS5 to Twitch & YouTube</h3>
-                <p>Professional setup for built-in broadcasting, overlays, and chat management.</p>
-            </div>
-        </a>
+.box-text p {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
 
-    </div>
+/* --- 6. ARTICLE PAGE LAYOUT --- */
+.article-page {
+    background-color: #050505;
+}
 
-    <footer>
-        <p>&copy; 2026 The Hardware Manual. All rights reserved.</p>
-    </footer>
+.article-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 12px;
+}
 
-    <script>
-    function searchArticles() {
-        let input = document.getElementById('manualSearch').value.toLowerCase();
-        let articles = document.getElementsByClassName('article-box');
-        let sectionTitles = document.getElementsByClassName('section-title');
+.article-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
-        for (let i = 0; i < articles.length; i++) {
-            let title = articles[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-            let description = articles[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-            let keywords = articles[i].getAttribute('data-keywords').toLowerCase();
-            
-            // Logic to check if input matches title, description, or keywords
-            if (title.includes(input) || description.includes(input) || keywords.includes(input)) {
-                articles[i].style.display = "flex";
-            } else {
-                articles[i].style.display = "none";
-            }
-        }
-        
-        // Hides section titles during active search to keep results clean
-        for (let j = 0; j < sectionTitles.length; j++) {
-            if (input.length > 0) {
-                sectionTitles[j].style.display = "none";
-            } else {
-                sectionTitles[j].style.display = "";
-            }
-        }
+.back-link, .next-article-link {
+    color: #0070d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* --- 7. THE FIXED IMAGE SIZING --- */
+.img-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- 8. BODY TEXT & FOOTER --- */
+.body-text h2 {
+    margin: 30px 0 15px;
+    color: #0070d1;
+}
+
+.body-text p {
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+
+.interlinking-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.interlinking-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interlinking-footer li {
+    margin-bottom: 10px;
+}
+
+.interlinking-footer a {
+    color: #0070d1;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+    margin-top: 60px;
+}
+
+/* --- 9. RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
     }
-    </script>
-
-</body>
-</html>
+    .search-container {
+        margin: 0;
+        width: 100%;
+    }
+    .featured-image {
+        height: 250px;
+    }
+}
 
