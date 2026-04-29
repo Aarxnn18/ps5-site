@@ -25,8 +25,8 @@
     </nav>
 
     <header class="hero-box">
-        <h1>THE HARDWARE MANUAL</h1>
-        <p>Expert Deep Dives & Technical Tutorials</p>
+        <h1>BUILT BY GAMERS FOR GAMERS!</h1>
+        <p>Expert Deep Dives & Technical Tutorials. EST. 2026</p>
     </header>
 
     <div class="content-wrapper">
@@ -164,7 +164,6 @@
             let description = articles[i].getElementsByTagName('p')[0].innerText.toLowerCase();
             let keywords = articles[i].getAttribute('data-keywords').toLowerCase();
             
-            // Logic to check if input matches title, description, or keywords
             if (title.includes(input) || description.includes(input) || keywords.includes(input)) {
                 articles[i].style.display = "flex";
             } else {
@@ -172,7 +171,6 @@
             }
         }
         
-        // Hides section titles during active search to keep results clean
         for (let j = 0; j < sectionTitles.length; j++) {
             if (input.length > 0) {
                 sectionTitles[j].style.display = "none";
