@@ -68,13 +68,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 112, 209, 0.4);
 }
 
-/* --- 4. HERO SECTION (UPDATED FOR PS5 BACKGROUND) --- */
+/* --- 4. HERO SECTION (BLUE PLACEHOLDER GRADIENT) --- */
 .hero-box {
-    /* The linear gradient here creates the darkening effect over the image */
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg');
+    /* This creates a nice blue-to-black gradient as a fallback if the image is missing */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                url('images/hero-bg.jpg'),
+                linear-gradient(135deg, #001a33 0%, #000000 100%);
     background-size: cover;
     background-position: center;
-    height: 350px; /* Slightly taller for the new text */
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,16 +87,17 @@ body {
 }
 
 .hero-box h1 {
-    font-size: 3rem; /* Larger text for the new slogan */
+    font-size: 3rem;
     font-weight: 900;
     margin-bottom: 15px;
     color: #ffffff;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero-box p {
     font-size: 1.1rem;
-    color: #0070d1; /* Blue color to make the established date stand out */
+    color: #0070d1;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -273,7 +276,7 @@ footer {
         width: 100%;
     }
     .hero-box h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .featured-image {
         height: 250px;
