@@ -1,185 +1,259 @@
-/* --- 1. GLOBAL RESET --- */
+/* --- ORIGINAL BASE STYLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #0f1113;
-    color: #e0e0e0;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* --- 2. NAVIGATION BAR --- */
+/* --- NAVIGATION --- */
 .nav-bar {
+    background-color: #111111;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
-    background-color: #16191c;
-    border-bottom: 2px solid #0070d1;
+    border-bottom: 1px solid #333;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo-area {
-    color: #ffffff;
-    font-size: 1.4rem;
     font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-links a {
-    color: #999;
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 20px;
     font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0070d1;
+}
+
+/* --- SEARCH BAR (NEW INTEGRATION) --- */
+.search-container {
+    flex-grow: 1;
+    max-width: 450px;
+    margin: 0 40px;
+}
+
+#manualSearch {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #1a1d21;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
     transition: 0.3s;
 }
 
-.nav-links a:hover { color: #0070d1; }
+#manualSearch:focus {
+    border-color: #0070d1;
+    box-shadow: 0 0 10px rgba(0, 112, 209, 0.4);
+}
 
-/* --- 3. HERO BOX (HOME) --- */
+/* --- HERO SECTION --- */
 .hero-box {
-    height: 350px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
-.hero-box h1 { font-size: 3rem; color: #fff; }
+.hero-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-/* --- 4. ARTICLE BOXES (HOME GRID) --- */
+/* --- GRID LAYOUT --- */
 .content-wrapper {
-    max-width: 1000px;
-    margin: 50px auto;
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .section-title {
-    color: #0070d1;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    grid-column: 1 / -1;
+    border-left: 4px solid #0070d1;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
+/* --- ARTICLE BOXES --- */
 .article-box {
-    display: flex;
-    background: #1a1d21;
-    margin-bottom: 25px;
-    border-radius: 12px;
+    background-color: #111111;
+    border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
-    border: 1px solid #2a2d31;
-    transition: 0.3s;
+    color: #ffffff;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-box:hover {
     transform: translateY(-5px);
     border-color: #0070d1;
-    box-shadow: 0 10px 30px rgba(0, 112, 209, 0.2);
 }
 
-.box-image { width: 250px; height: 180px; object-fit: cover; }
-.box-text { padding: 25px; }
-.box-text h3 { color: #fff; margin-bottom: 10px; }
+.box-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-/* --- 5. ARTICLE PAGE (INNER PAGES) --- */
+.box-text {
+    padding: 20px;
+}
+
+.box-text h3 {
+    margin-bottom: 10px;
+    color: #0070d1;
+}
+
+.box-text p {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+/* --- ARTICLE PAGES --- */
 .article-page {
-    background-color: #0f1113;
-    padding-bottom: 100px;
+    background-color: #050505;
 }
 
 .article-content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 40px auto;
-    background: #1a1d21;
-    padding: 50px;
-    border-radius: 15px;
-    border: 1px solid #2a2d31;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 12px;
 }
 
-.back-link { 
-    color: #0070d1; 
-    text-decoration: none; 
-    display: inline-block; 
-    margin-bottom: 30px;
+.article-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.back-link, .next-article-link {
+    color: #0070d1;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.article-header h1 { 
-    font-size: 2.8rem; 
-    color: #fff; 
-    margin-bottom: 15px; 
+.article-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
 .article-meta {
-    color: #666;
-    margin-bottom: 40px;
+    color: #888;
     font-size: 0.9rem;
+    margin-bottom: 20px;
 }
 
-/* THE "PERFECT FIT" IMAGE CONTAINER */
 .img-container {
-    text-align: center; /* Centers the image */
-    margin: 40px 0;
-}
-
-.featured-image { 
     width: 100%;
-    max-width: 650px; /* Ensures it doesn't span the whole page width */
-    height: 350px;    /* Sets a standard professional height */
-    object-fit: cover; /* Prevents stretching */
-    border-radius: 8px; 
-    border: 1px solid #333;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.highlight-box {
-    background: rgba(0, 112, 209, 0.1);
-    border-left: 5px solid #0070d1;
-    padding: 25px;
-    margin: 40px 0;
-    color: #fff;
-    line-height: 1.6;
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.body-text h2 { 
-    color: #0070d1; 
-    margin-top: 45px; 
-    margin-bottom: 20px; 
-    font-size: 1.8rem;
+.body-text h2 {
+    margin: 30px 0 15px;
+    color: #0070d1;
 }
 
 .body-text p {
-    margin-bottom: 25px;
-    line-height: 1.8;
-    color: #ccc;
+    margin-bottom: 20px;
+    color: #dddddd;
 }
 
-.body-text ul, .body-text ol { 
-    margin: 20px 0 30px 25px; 
-    color: #ccc; 
+.highlight-box {
+    background-color: #1a1d21;
+    border-left: 4px solid #0070d1;
+    padding: 20px;
+    margin: 25px 0;
 }
 
-footer { text-align: center; padding: 40px; color: #444; }
+/* --- FOOTER & INTERLINKING --- */
+.interlinking-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+}
 
-/* This rule finds every image inside your article body and fixes the size */
-.article-content img {
-    display: block;       /* Centers it */
-    margin: 30px auto;    /* Centers it and adds space around it */
-    width: 100%;          /* Allows it to be responsive */
-    max-width: 600px;     /* THE FIX: Prevents it from getting too big */
-    height: 350px;        /* Standard professional height */
-    object-fit: cover;    /* Keeps it from looking stretched */
-    border-radius: 10px;
-    border: 1px solid #333;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+.interlinking-footer hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.interlinking-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interlinking-footer li {
+    margin-bottom: 10px;
+}
+
+.interlinking-footer a {
+    color: #0070d1;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+    margin-top: 60px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-container {
+        margin: 0;
+        width: 100%;
+    }
 }
 
