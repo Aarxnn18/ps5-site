@@ -2,139 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Hardware Manual | PS5 Performance Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hardware Manual | PS5 Expert Guides</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="nav-bar">
-        <div class="logo-area">📖 THE HARDWARE MANUAL</div>
+        <div class="logo-area">THE HARDWARE MANUAL</div>
+        
+        <div class="search-container">
+            <input type="text" id="manualSearch" placeholder="Search articles..." onkeyup="searchArticles()">
+        </div>
+
         <div class="nav-links">
-            <a href="#buying-guides">BUYING GUIDES</a>
-            <a href="#tutorials">TUTORIALS</a>
+            <a href="index.html">Home</a>
+            <a href="#">Guides</a>
+            <a href="#">Contact</a>
         </div>
     </nav>
 
     <header class="hero-box">
-        <h1>PS5 PRO GUIDE</h1>
-        <p>Premium Hardware Reviews & Step-By-Step Tutorials</p>
+        <h1>THE HARDWARE MANUAL</h1>
+        <p>Expert Deep Dives & Technical Tutorials</p>
     </header>
 
     <div class="content-wrapper">
         
-        <h2 id="buying-guides" class="section-title">Core Buying Guides</h2>
+        <h2 class="section-title">Core Hardware Buying Guides</h2>
         
         <a href="articles/ssd-ps5.html" class="article-box">
-            <img src="images/ssd.jpg" class="box-image" alt="SSD">
+            <img src="images/ssd-hero.jpg" class="box-image" alt="Best PS5 SSDs">
             <div class="box-text">
-                <h3>Best PS5 SSDs (2026)</h3>
-                <p>Expand your storage capacity with the fastest Gen4 NVMe drives available.</p>
+                <h3>Best PS5 SSDs: 2026 Performance Analysis</h3>
+                <p>Full in-depth descriptions and real reviews of the fastest Gen4 NVMe drives available for the PS5.</p>
             </div>
         </a>
 
         <a href="articles/ps5-controllers.html" class="article-box">
-            <img src="images/controller.jpg" class="box-image" alt="Controllers">
+            <img src="images/controller-hero.jpg" class="box-image" alt="PS5 Pro Controllers">
             <div class="box-text">
-                <h3>Best PS5 Controllers</h3>
-                <p>From pro-paddles to Hall Effect sticks, find your perfect gaming pad.</p>
+                <h3>The Definitive PS5 Controller Review</h3>
+                <p>Detailed analysis of Hall Effect sensors and the best pro-tier controllers for competitive play.</p>
             </div>
         </a>
 
         <a href="articles/ps5-headsets.html" class="article-box">
-            <img src="images/headset.jpg" class="box-image" alt="Headsets">
+            <img src="images/headset-hero.jpg" class="box-image" alt="PS5 Headsets">
             <div class="box-text">
-                <h3>Best PS5 Headsets</h3>
-                <p>Experience Tempest 3D audio with these top-tier headsets.</p>
-            </div>
-        </a>
-
-        <a href="articles/best-ps5-monitors.html" class="article-box">
-            <img src="images/monitor.jpg" class="box-image" alt="Monitors">
-            <div class="box-text">
-                <h3>Best PS5 Monitors</h3>
-                <p>The best 4K 120Hz displays for a smooth gaming experience.</p>
-            </div>
-        </a>
-
-        <a href="articles/psvr2-guide.html" class="article-box">
-            <img src="images/psvr2.jpg" class="box-image" alt="PSVR2">
-            <div class="box-text">
-                <h3>PSVR2 Buying Guide</h3>
-                <p>Essential games and mods for the ultimate VR experience.</p>
+                <h3>3D Audio Masterclass: Best PS5 Headsets</h3>
+                <p>Expert evaluation of Planar Magnetic drivers and the best headsets for Tempest 3D Audio immersion.</p>
             </div>
         </a>
 
         <a href="articles/ps5-streaming-gear.html" class="article-box">
-            <img src="images/streaming.jpg" class="box-image" alt="Streaming">
+            <img src="images/streaming-hero.jpg" class="box-image" alt="Streaming Gear">
             <div class="box-text">
-                <h3>Best Streaming Gear</h3>
-                <p>The best cameras and mics for starting your channel.</p>
+                <h3>Best PS5 Streaming Gear: 2026 Creator's Guide</h3>
+                <p>Full hardware breakdown for creators looking for broadcast-quality audio and 4K visuals.</p>
+            </div>
+        </a>
+
+        <a href="articles/best-ps5-monitors.html" class="article-box">
+            <img src="images/monitor-hero.jpg" class="box-image" alt="Best PS5 Monitors">
+            <div class="box-text">
+                <h3>Best PS5 Monitors: 4K 120Hz & OLED Displays</h3>
+                <p>In-depth reviews of HDMI 2.1 displays and why OLED is the gold standard for response times.</p>
             </div>
         </a>
 
         <a href="articles/best-ps5-hdmi-cables.html" class="article-box">
-            <img src="images/hdmi-cable.jpg" class="box-image" alt="Cables">
+            <img src="images/hdmi-hero.jpg" class="box-image" alt="Best HDMI Cables">
             <div class="box-text">
-                <h3>Best HDMI 2.1 Cables</h3>
-                <p>Ensure your cable can handle 4K 120Hz without signal drops.</p>
+                <h3>Best HDMI 2.1 Cables: Preserving Signal Integrity</h3>
+                <p>Why 48Gbps bandwidth is mandatory and which cables actually deliver the performance promised.</p>
             </div>
         </a>
 
-        <h2 id="tutorials" class="section-title">Step-By-Step Tutorials</h2>
-
-        <a href="articles/how-to-install-ps5-ssd.html" class="article-box">
-            <img src="images/ssd-install.jpg" class="box-image" alt="SSD Install">
+        <a href="articles/psvr2-guide.html" class="article-box">
+            <img src="images/psvr2-hero.jpg" class="box-image" alt="PSVR2 Buying Guide">
             <div class="box-text">
-                <h3>How to Install an SSD</h3>
-                <p>A safe, step-by-step guide to installing M.2 storage.</p>
+                <h3>PSVR2: Is the Hardware Worth it in 2026?</h3>
+                <p>A technical deep dive into Foveated Rendering and the state of high-end VR hardware.</p>
             </div>
         </a>
 
-        <a href="articles/how-to-pair-ps5-controller.html" class="article-box">
-            <img src="images/pair-controller.jpg" class="box-image" alt="Controller Fix">
+        <h2 class="section-title">Technical How-To Tutorials</h2>
+
+        <a href="articles/how-to-enable-120hz-ps5.html" class="article-box">
+            <img src="images/120hz-ui.jpg" class="box-image" alt="Enable 120Hz">
             <div class="box-text">
-                <h3>Pair & Reset Controllers</h3>
-                <p>Fix sync issues or connect your pad to PC and Mobile.</p>
+                <h3>How to Enable 120Hz on PS5: The Complete Guide</h3>
+                <p>Step-by-step technical walkthrough to unlock high-frame-rate gaming on compatible displays.</p>
             </div>
         </a>
 
         <a href="articles/how-to-enable-ps5-3d-audio.html" class="article-box">
-            <img src="images/3d-audio.jpg" class="box-image" alt="3D Audio">
+            <img src="images/3d-audio-ui.jpg" class="box-image" alt="Enable 3D Audio">
             <div class="box-text">
-                <h3>Enable 3D Audio</h3>
-                <p>Setup instructions for the best spatial sound settings.</p>
+                <h3>How to Optimize Tempest 3D Audio</h3>
+                <p>Guide to calibrating your personal HRTF profile for the most accurate spatial soundstage.</p>
             </div>
         </a>
 
-        <a href="articles/how-to-enable-120hz-ps5.html" class="article-box">
-            <img src="images/120hz-setup.jpg" class="box-image" alt="120Hz Fix">
+        <a href="articles/how-to-install-ps5-ssd.html" class="article-box">
+            <img src="images/install-step.jpg" class="box-image" alt="Install SSD">
             <div class="box-text">
-                <h3>Enable 120Hz Mode</h3>
-                <p>How to get the smoothest frame rates on your monitor.</p>
+                <h3>How to Install an M.2 SSD in Your PS5</h3>
+                <p>Expert hardware installation guide with static safety tips and formatting instructions.</p>
+            </div>
+        </a>
+
+        <a href="articles/how-to-pair-ps5-controller.html" class="article-box">
+            <img src="images/pair-step.jpg" class="box-image" alt="Pair Controller">
+            <div class="box-text">
+                <h3>How to Pair, Reset, and Update DualSense Controllers</h3>
+                <p>Technical steps for syncing to PS5, PC, and performing hard factory resets.</p>
             </div>
         </a>
 
         <a href="articles/how-to-setup-psvr2.html" class="article-box">
-            <img src="images/psvr2-setup.jpg" class="box-image" alt="VR Setup">
+            <img src="images/psvr2-setup.jpg" class="box-image" alt="PSVR2 Setup">
             <div class="box-text">
-                <h3>PSVR2 Setup Guide</h3>
-                <p>Calibrate eye-tracking and room-scale play areas.</p>
-            </div>
-        </a>
-
-        <a href="articles/how-to-stream.html" class="article-box">
-            <img src="images/stream-setup.jpg" class="box-image" alt="Stream Setup">
-            <div class="box-text">
-                <h3>Start Your First Stream</h3>
-                <p>Link Twitch/YouTube and go live in minutes.</p>
+                <h3>PSVR2 Expert Setup & Room Calibration</h3>
+                <p>How to find the "Sweet Spot" and calibrate eye tracking for peak VR performance.</p>
             </div>
         </a>
 
         <a href="articles/how-to-spot-fake-hdmi-21.html" class="article-box">
-            <img src="images/fake-hdmi.jpg" class="box-image" alt="Verify HDMI">
+            <img src="images/fake-check.jpg" class="box-image" alt="Spot Fake HDMI">
             <div class="box-text">
-                <h3>Spot Fake HDMI 2.1</h3>
-                <p>Learn how to use the official app to verify your cable's speed.</p>
+                <h3>How to Identify Counterfeit HDMI 2.1 Cables</h3>
+                <p>Tutorial on using the official HDMI certification app to protect your signal integrity.</p>
+            </div>
+        </a>
+
+        <a href="articles/how-to-stream.html" class="article-box">
+            <img src="images/stream-menu.jpg" class="box-image" alt="PS5 Streaming">
+            <div class="box-text">
+                <h3>How to Stream Directly From PS5 to Twitch & YouTube</h3>
+                <p>Professional setup for built-in broadcasting, overlays, and chat management.</p>
             </div>
         </a>
 
@@ -143,6 +150,25 @@
     <footer>
         <p>&copy; 2026 The Hardware Manual. All rights reserved.</p>
     </footer>
+
+    <script>
+    function searchArticles() {
+        let input = document.getElementById('manualSearch').value.toLowerCase();
+        let articles = document.getElementsByClassName('article-box');
+
+        for (let i = 0; i < articles.length; i++) {
+            let title = articles[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            let description = articles[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+            
+            // Checks both title and description for matches
+            if (title.includes(input) || description.includes(input)) {
+                articles[i].style.display = "";
+            } else {
+                articles[i].style.display = "none";
+            }
+        }
+    }
+    </script>
 
 </body>
 </html>
