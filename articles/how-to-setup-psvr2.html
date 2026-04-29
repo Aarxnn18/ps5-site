@@ -2,25 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PSVR2 Setup Guide | The Hardware Manual</title>
+    <title>PSVR2 Expert Setup & Room Calibration | The Hardware Manual</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="article-page">
     <div class="article-content">
         <a href="../index.html" class="back-link">← Back to Home</a>
         <header class="article-header">
-            <h1>PSVR2 First-Time Setup</h1>
-            <p class="article-meta">Tutorial | April 2026</p>
+            <h1>PSVR2 Expert Setup & Room Calibration</h1>
+            <p class="article-meta">Hardware Installation Guide | Updated April 2026</p>
         </header>
-        <img src="../images/psvr2-setup.jpg" class="featured-image" alt="PSVR2 Setup">
-        <div class="highlight-box">
-            <strong>Safety Note:</strong> Clear a 2m x 2m area for Roomscale mode to avoid bumping into furniture.
+        
+        <div class="img-container">
+            <img src="../images/psvr2-setup.jpg" class="featured-image" alt="PSVR2 Headset and Sense Controllers">
         </div>
+
+        <div class="highlight-box">
+            <strong>Room Lighting Requirement:</strong> PSVR2 utilizes inside-out tracking via four external cameras. Your room must be adequately lit for the headset to map its environment. Playing in total darkness will cause complete tracking failure unless you use a dedicated IR emitter.
+        </div>
+
         <section class="body-text">
-            <h2>The Connection</h2>
-            <p>Plug the single USB-C cable into the front of your PS5. Power on the headset and follow the on-screen lens adjustment steps.</p>
-            <h2>Eye Tracking</h2>
-            <p>Make sure to calibrate eye-tracking in the settings for the best visual clarity and performance.</p>
+            <h2>Step 1: Hardware Connection</h2>
+            <p>Unlike the original PSVR, which required an external breakout box and massive cable management, the PSVR2 operates on a single connection.</p>
+            <ol>
+                <li>Plug the attached USB-C cable directly into the SuperSpeed USB-C port on the front of your PS5 console.</li>
+                <li>Press the power button located on the bottom center of the headset's front visor.</li>
+                <li>Turn on both PlayStation VR2 Sense controllers by pressing their respective PS buttons.</li>
+            </ol>
+
+            <h2>Step 2: Lens Calibration (IPD Adjustment)</h2>
+            <p>To prevent motion sickness and blurred images, you must match the lenses to your Interpupillary Distance (the space between your eyes).</p>
+            <ol>
+                <li>Put the headset on and adjust the halo band using the dial on the back until it rests securely on your crown.</li>
+                <li>Navigate to <strong>Settings > Accessories > PlayStation VR2 > Adjust Visibility</strong>.</li>
+                <li>Turn the small dial located on the top-left of the visor. Watch the on-screen display and rotate the dial until the digital eyes align perfectly within the blue circles.</li>
+            </ol>
+
+            <h2>Step 3: Eye Tracking Calibration</h2>
+            <p>Foveated rendering relies entirely on accurate eye tracking to drastically improve in-game performance.</p>
+            <ol>
+                <li>In the VR2 menu, select <strong>Eye Tracking</strong>.</li>
+                <li>Follow the red dot across a dark screen using <em>only your eyes</em>. Keep your head completely still during this process.</li>
+            </ol>
+
+            <h2>Step 4: Defining the Play Area</h2>
+            <p>You must teach the console where your physical walls and furniture are to establish a safe boundary matrix.</p>
+            <ol>
+                <li>Select <strong>Set Play Area</strong>. The headset will activate pass-through vision, allowing you to see your room in black and white.</li>
+                <li>Look around your entire room. The headset will cast blue polygons over surfaces to scan the geometry.</li>
+                <li>If the automatic scan misses a chair or desk, use the Sense controllers to manually paint a safe border around your usable floor space.</li>
+            </ol>
         </section>
     </div>
 </body>
