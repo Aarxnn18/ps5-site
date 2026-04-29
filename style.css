@@ -40,14 +40,23 @@ h2 {
 
 /* Cards */
 .guide-card {
-  background: #1b1b1b;
-  padding: 20px;
-  border-radius: 14px;
+  background: linear-gradient(145deg, #1a1a1a, #202020);
+  padding: 24px;
+  border-radius: 18px;
   text-decoration: none;
   color: white;
-  transition: 0.2s ease;
-  border: 1px solid #2a2a2a;
+  transition: all 0.25s ease;
+  border: 1px solid #2f2f2f;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
+
+.guide-card:hover {
+  transform: translateY(-6px);
+  border-color: #4da3ff;
+  box-shadow: 0 8px 25px rgba(77,163,255,0.2);
+  background: linear-gradient(145deg, #202020, #272727);
+}
+
 
 .guide-card:hover {
   transform: translateY(-4px);
