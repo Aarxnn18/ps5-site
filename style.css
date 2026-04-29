@@ -2,71 +2,72 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #0f0f0f;
-  color: #eaeaea;
+  color: #f2f2f2;
   line-height: 1.6;
 }
 
-/* Center layout */
-header, main {
-  max-width: 800px;
+/* Layout */
+header,
+main {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header styling */
+/* Header */
 header {
   text-align: center;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 h2 {
-  margin-top: 30px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Guide grid */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.guide-card {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease;
+  border: 1px solid #2a2a2a;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  background: #232323;
+}
+
+.guide-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #4da3ff;
 }
 
 /* Links */
 a {
   color: #4da3ff;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Article list becomes cards */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #1a1a1a;
-  margin: 12px 0;
-  padding: 15px;
-  border-radius: 10px;
-  transition: 0.2s ease;
-}
-
-li:hover {
-  background: #242424;
-  transform: translateY(-2px);
-}
-
-/* Mobile fix */
+/* Mobile */
 @media (max-width: 600px) {
-  header, main {
-    padding: 15px;
-  }
-
   h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
