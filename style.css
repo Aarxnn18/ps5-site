@@ -68,10 +68,13 @@ body {
     box-shadow: 0 0 10px rgba(0, 112, 209, 0.4);
 }
 
-/* --- 4. HERO SECTION --- */
+/* --- 4. HERO SECTION (UPDATED FOR PS5 BACKGROUND) --- */
 .hero-box {
-    background-color: #111111;
-    height: 300px;
+    /* The linear gradient here creates the darkening effect over the image */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px; /* Slightly taller for the new text */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,9 +85,18 @@ body {
 }
 
 .hero-box h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem; /* Larger text for the new slogan */
+    font-weight: 900;
+    margin-bottom: 15px;
     color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.hero-box p {
+    font-size: 1.1rem;
+    color: #0070d1; /* Blue color to make the established date stand out */
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 /* --- 5. GRID & HOME PAGE --- */
@@ -216,17 +228,7 @@ body {
 .interlinking-footer {
     margin-top: 50px;
     padding-top: 20px;
-}
-
-.interlinking-footer hr {
-    border: 0;
     border-top: 1px solid #333;
-    margin-bottom: 20px;
-}
-
-.interlinking-footer h3 {
-    color: #0070d1;
-    margin-bottom: 15px;
 }
 
 .interlinking-footer ul {
@@ -235,7 +237,7 @@ body {
 }
 
 .interlinking-footer li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .interlinking-footer a {
@@ -269,6 +271,9 @@ footer {
     .search-container {
         margin: 0;
         width: 100%;
+    }
+    .hero-box h1 {
+        font-size: 2rem;
     }
     .featured-image {
         height: 250px;
