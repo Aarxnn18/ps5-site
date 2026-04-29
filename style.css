@@ -118,3 +118,9 @@ a {
 .back-link:hover {
   text-decoration: underline;
 }
+
+.article-image {
+  width: 100%;
+  vorder-radius: 14px;
+  margin: 20px 0 30px;
+}
