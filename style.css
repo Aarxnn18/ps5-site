@@ -170,3 +170,16 @@ body {
 
 footer { text-align: center; padding: 40px; color: #444; }
 
+/* This rule finds every image inside your article body and fixes the size */
+.article-content img {
+    display: block;       /* Centers it */
+    margin: 30px auto;    /* Centers it and adds space around it */
+    width: 100%;          /* Allows it to be responsive */
+    max-width: 600px;     /* THE FIX: Prevents it from getting too big */
+    height: 350px;        /* Standard professional height */
+    object-fit: cover;    /* Keeps it from looking stretched */
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
