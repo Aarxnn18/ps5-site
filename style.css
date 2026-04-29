@@ -1,301 +1,70 @@
+/* Core Styling */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #0f0f0f;
-  color: #f2f2f2;
-  line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
 }
 
-/* Layout */
-
-header,
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+/* Restored Hero Box */
+.hero-box {
+    background-image: linear-gradient(rgba(0, 112, 209, 0.8), rgba(0, 112, 209, 0.8)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
 }
 
-/* NAVBAR */
-
-.navbar {
-  background: #111827;
-  border-bottom: 1px solid #1f2937;
-  padding: 16px 24px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.hero-box h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-.nav-logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
+/* Interactive Article Boxes */
+.section-title {
+    padding-left: 20px;
+    border-left: 5px solid #0070d1;
+    margin-left: 20px;
 }
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #d1d5db;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #60a5fa;
-}
-
-/* HERO SECTION */
-
-.hero {
-  background:
-    linear-gradient(rgba(10,10,20,0.75),
-    rgba(10,10,20,0.9)),
-    url("images/ssd.jpg");
-
-  background-size: cover;
-  background-position: center;
-
-  padding: 120px 20px;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #d1d5db;
-}
-
-/* Headings */
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-h2 {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-/* GUIDE GRID */
-
-.guide-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 28px;
-  margin-top: 30px;
-}
-
-/* GUIDE CARDS */
-
-.guide-card {
-  background: #18181b;
-  border-radius: 18px;
-  overflow: hidden;
-  text-decoration: none;
-  color: white;
-  transition: 0.25s ease;
-  border: 1px solid #27272a;
-}
-
-.guide-card:hover {
-  transform: translateY(-6px);
-  border-color: #3b82f6;
-  box-shadow: 0 10px 25px rgba(59,130,246,0.2);
-}
-
-.guide-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.guide-content {
-  padding: 20px;
-}
-
-.guide-content h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  color: #60a5fa;
-  font-size: 1.3rem;
-}
-
-.guide-content p {
-  color: #d4d4d8;
-}
-
-/* Links */
-
-a {
-  color: #60a5fa;
-}
-
-/* ARTICLE PAGES */
 
 .article-container {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
-
-.article-container h1 {
-  margin-bottom: 20px;
-}
-
-.article-container p,
-.article-container li {
-  color: #d7d7d7;
-  font-size: 1.05rem;
-}
-
-.intro {
-  font-size: 1.15rem;
-  margin-bottom: 25px;
-}
-
-/* Article image */
-
-.article-image {
-  width: 100%;
-  max-width: 700px;
-  height: 320px;
-  object-fit: cover;
-  display: block;
-  margin: 25px auto 35px;
-  border-radius: 16px;
-}
-
-/* Highlight box */
-
-.highlight-box {
-  background: #1e293b;
-  border-left: 4px solid #3b82f6;
-  padding: 18px;
-  margin: 30px 0;
-  border-radius: 10px;
-}
-
-/* Back link */
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 30px;
-  color: #7ab8ff;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* Lists */
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .guide-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .article-image {
-    height: 240px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  /* Homepage Layout Improvements */
-.section-title {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 2rem;
-    color: #0070d1; /* PlayStation Blue */
-}
-
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     padding: 20px;
-    transition: transform 0.2s;
+}
+
+.interactive-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
     text-decoration: none;
-    color: #333;
-    display: flex;
-    flex-direction: column;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease; /* Smooth transition for the hover */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+/* The Hover Highlight Effect */
+.interactive-box:hover {
+    transform: scale(1.02); /* Slight pop out */
+    border-color: #0070d1;
+    box-shadow: 0 10px 20px rgba(0, 112, 209, 0.2);
+    background-color: #ffffff;
 }
 
-.card h3 {
+.interactive-box h3 {
     margin-top: 0;
     color: #0070d1;
 }
 
-.card p {
-    font-size: 0.9rem;
-    flex-grow: 1;
+.tag {
+    font-size: 0.8rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.tag {
-    display: inline-block;
-    background: #e1f0ff;
-    color: #0070d1;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-}
