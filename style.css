@@ -1,70 +1,75 @@
-/* Core Styling */
+/* Core Layout */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f0f2f5;
 }
 
-/* Restored Hero Box */
+/* The Restored Hero Box */
 .hero-box {
-    background-image: linear-gradient(rgba(0, 112, 209, 0.8), rgba(0, 112, 209, 0.8)), url('images/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
-    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero-box h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin: 0;
 }
 
 /* Interactive Article Boxes */
-.section-title {
-    padding-left: 20px;
-    border-left: 5px solid #0070d1;
-    margin-left: 20px;
+.content-wrapper {
+    max-width: 900px;
+    margin: -50px auto 50px auto; /* Pulls content up over the hero slightly */
+    padding: 0 20px;
 }
 
-.article-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.section-label {
+    background: #0070d1;
+    color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    margin-top: 40px;
 }
 
-.interactive-box {
+.article-box {
     background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 25px;
+    padding: 30px;
     margin-bottom: 20px;
+    border-radius: 0 10px 10px 10px;
+    border: 1px solid #ddd;
     text-decoration: none;
-    color: inherit;
+    color: #333;
     display: block;
-    transition: all 0.3s ease; /* Smooth transition for the hover */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease; /* Makes the interaction smooth */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* The Hover Highlight Effect */
-.interactive-box:hover {
-    transform: scale(1.02); /* Slight pop out */
-    border-color: #0070d1;
-    box-shadow: 0 10px 20px rgba(0, 112, 209, 0.2);
-    background-color: #ffffff;
+/* The Hover Effect */
+.article-box:hover {
+    transform: translateY(-8px); /* Lifts the box up */
+    border-color: #0070d1; /* Changes border to PlayStation blue */
+    box-shadow: 0 15px 30px rgba(0, 112, 209, 0.2); /* Deep blue glow */
 }
 
-.interactive-box h3 {
-    margin-top: 0;
+.article-box h3 {
+    margin: 0 0 10px 0;
     color: #0070d1;
+    font-size: 1.5rem;
 }
 
-.tag {
-    font-size: 0.8rem;
-    color: #777;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.article-box p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
 }
 
