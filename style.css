@@ -40,7 +40,7 @@ body {
 
 .nav-links a:hover { color: #0070d1; }
 
-/* --- 3. HERO BOX --- */
+/* --- 3. HERO BOX (HOME) --- */
 .hero-box {
     height: 350px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg');
@@ -55,7 +55,7 @@ body {
 
 .hero-box h1 { font-size: 3rem; color: #fff; }
 
-/* --- 4. ARTICLE BOXES (HOME) --- */
+/* --- 4. ARTICLE BOXES (HOME GRID) --- */
 .content-wrapper {
     max-width: 1000px;
     margin: 50px auto;
@@ -90,33 +90,83 @@ body {
 .box-text { padding: 25px; }
 .box-text h3 { color: #fff; margin-bottom: 10px; }
 
-/* --- 5. ARTICLE PAGE SPECIFIC --- */
-.article-page { background-color: #0f1113; }
+/* --- 5. ARTICLE PAGE (INNER PAGES) --- */
+.article-page {
+    background-color: #0f1113;
+    padding-bottom: 100px;
+}
 
 .article-content {
-    max-width: 850px;
+    max-width: 900px;
     margin: 40px auto;
     background: #1a1d21;
-    padding: 40px;
+    padding: 50px;
     border-radius: 15px;
     border: 1px solid #2a2d31;
 }
 
-.back-link { color: #0070d1; text-decoration: none; display: block; margin-bottom: 20px; }
+.back-link { 
+    color: #0070d1; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin-bottom: 30px;
+    font-weight: bold;
+}
 
-.article-header h1 { font-size: 2.5rem; color: #fff; margin-bottom: 20px; }
+.article-header h1 { 
+    font-size: 2.8rem; 
+    color: #fff; 
+    margin-bottom: 15px; 
+}
 
-.featured-image { width: 100%; border-radius: 10px; margin-bottom: 30px; }
+.article-meta {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+/* THE "PERFECT FIT" IMAGE CONTAINER */
+.img-container {
+    text-align: center; /* Centers the image */
+    margin: 40px 0;
+}
+
+.featured-image { 
+    width: 100%;
+    max-width: 650px; /* Ensures it doesn't span the whole page width */
+    height: 350px;    /* Sets a standard professional height */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 8px; 
+    border: 1px solid #333;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
 
 .highlight-box {
     background: rgba(0, 112, 209, 0.1);
     border-left: 5px solid #0070d1;
-    padding: 20px;
-    margin-bottom: 30px;
+    padding: 25px;
+    margin: 40px 0;
+    color: #fff;
+    line-height: 1.6;
 }
 
-.body-text h2 { color: #0070d1; margin-top: 30px; margin-bottom: 15px; }
-.body-text ul, .body-text ol { margin-left: 20px; color: #ccc; }
+.body-text h2 { 
+    color: #0070d1; 
+    margin-top: 45px; 
+    margin-bottom: 20px; 
+    font-size: 1.8rem;
+}
+
+.body-text p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.body-text ul, .body-text ol { 
+    margin: 20px 0 30px 25px; 
+    color: #ccc; 
+}
 
 footer { text-align: center; padding: 40px; color: #444; }
 
