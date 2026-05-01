@@ -7,6 +7,39 @@
     <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
+
+    <!-- 1. JSON-LD HOWTO SCHEMA (Technical SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Fix PS Portal Stutter and Lag",
+      "description": "Technical guide to eliminating microstutter and latency on the PlayStation Portal by optimizing network settings and PS5 output configurations.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Hardwire the PS5 console to your router using a Cat6 or higher Ethernet cable."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Isolate the Portal on a dedicated 5GHz or 6GHz Wi-Fi band."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Disable 120Hz and HDR output in the PS5 System Settings to reduce encoder load."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Disconnect the HDMI cable from the PS5 to prevent display-sync stutter."
+        }
+      ],
+      "totalTime": "PT20M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "Cat8 Ethernet Cable or Wi-Fi 6E/7 Router"
+      }
+    }
+    </script>
 </head>
 <body class="article-page">
     <div class="article-content">
@@ -17,16 +50,51 @@
 
         <header class="article-header">
             <h1>How to Fix PlayStation Portal Stutter and Lag</h1>
-            <p class="article-meta">Network Optimization | Updated April 2026</p>
+            <p class="article-meta">Network Optimization | Updated May 2026</p>
         </header>
         
         <div class="img-container">
-            <img src="../images/portal-lag-fix.jpg" class="featured-image" alt="Optimizing Router for PS Portal">
+            <img src="../images/portal-lag-fix.jpg" class="featured-image" alt="Optimizing PS5 Pro Network for Portal">
         </div>
 
         <section class="body-text">
             <h2>The "Microstutter" Problem</h2>
-            <p>The PS Portal relies on a stable 15Mbps stream. However, even with fast internet, users often experience "microstutter." This is usually caused by network congestion or the PS5 attempting to maintain a 120Hz handshake with a sleeping TV while encoding the remote stream.</p>
+            <p>The PS Portal requires a stable 15Mbps stream for 1080p performance. However, even with gigabit fiber, users often experience "microstutter." This is usually caused by local network congestion or the PS5 attempting to maintain a 120Hz handshake with a sleeping TV while simultaneously encoding the remote stream. For **PS5 Pro** users, the extra processing power helps, but network bottlenecks remain the primary culprit in 2026.</p>
+
+            <!-- 2. NETWORK STABILITY TABLE (Conversion UI) -->
+            <div style="overflow-x: auto; margin: 30px 0;">
+                <table style="width: 100%; border-collapse: collapse; background: #1a1a1a; color: #ccc; border-radius: 8px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #0070d1;">
+                            <th style="padding: 15px; text-align: left;">Connection Type</th>
+                            <th style="padding: 15px; text-align: left;">Stability</th>
+                            <th style="padding: 15px; text-align: left;">Recommended For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 15px;">Cat8 Wired</td>
+                            <td style="padding: 15px; color: #00ff00;">Elite (0% Packet Loss)</td>
+                            <td style="padding: 15px;">Competitive Online Play</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 15px;">Wi-Fi 6E / 7 (6GHz)</td>
+                            <td style="padding: 15px; color: #00ff00;">High</td>
+                            <td style="padding: 15px;">Single Player / RPGs</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 15px;">Wi-Fi 5 (5GHz)</td>
+                            <td style="padding: 15px; color: #ffcc00;">Moderate</td>
+                            <td style="padding: 15px;">Casual Play (Near Router)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;">Wi-Fi 2.4GHz</td>
+                            <td style="padding: 15px; color: #ff4444;">Poor (High Jitter)</td>
+                            <td style="padding: 15px;">Not Recommended</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <blockquote>
                 <strong>The Gold Standard:</strong> Remote play stability is 90% dependent on the host connection. If your PS5 isn't hardwired, you will experience dropped frames. See our <a href="best-ps5-hdmi-cables.html">Connection Guide</a> for high-shielded Ethernet cables that eliminate packet loss.
@@ -35,17 +103,24 @@
             <h2>Step-by-Step Instructions</h2>
             <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; border-left: 4px solid #0070d1;">
                 <ol style="margin-left: 20px;">
-                    <li style="margin-bottom: 15px;"><strong>Hardwire the Host:</strong> Connect your PS5 to your router via a Cat6 or Cat7 Ethernet cable. <strong>Never</strong> stream from a PS5 that is on Wi-Fi.</li>
-                    <li style="margin-bottom: 15px;"><strong>Unplug the HDMI:</strong> A common 2026 technical conflict involves the TV's HDMI handshake causing stutters. Try unplugging the HDMI cable from the PS5 while using the Portal to force the encoder to prioritize the stream.</li>
-                    <li style="margin-bottom: 15px;"><strong>Force 5GHz/6GHz:</strong> In your router settings, ensure your Portal is locked to the 5GHz band. Disable "Smart Connect" which often forces the Portal onto the slower, congested 2.4GHz band.</li>
-                    <li style="margin-bottom: 15px;"><strong>Disable 120Hz/HDR:</strong> Before starting a Portal session, go to <strong>Settings > Screen and Video</strong> and toggle 120Hz and HDR to OFF. This reduces the processing overhead on the PS5's internal encoder.</li>
+                    <li style="margin-bottom: 15px;"><strong>Hardwire the Host:</strong> Connect your PS5 to your router via a Cat6 or Cat7 Ethernet cable. <strong>Never</strong> stream from a PS5 that is on Wi-Fi if you want a professional-grade experience.</li>
+                    <li style="margin-bottom: 15px;"><strong>The HDMI Hack:</strong> A common 2026 technical conflict involves the TV's HDMI handshake causing periodic stutters. Unplug the HDMI cable from the back of the PS5 during long Portal sessions to force the console's encoder to focus entirely on the stream.</li>
+                    
+                    <!-- 3. HIGH-INTENT WARNING (Hardware Trigger) -->
+                    <div style="background: #ffcc0022; border: 1px solid #ffcc00; color: #fff; padding: 10px; margin: 10px 0; font-size: 0.9rem; border-radius: 4px;">
+                        <strong>⚠️ Tech Tip:</strong> Most ISP-provided routers struggle with the PS Portal's specific bitrate demands. Upgrading to a <a href="ps-portal-accessories.html" style="color: #ffcc00; text-decoration: underline;">Gaming Router with Wi-Fi 6E</a> allows you to use the 6GHz band, which is virtually free of interference.
+                    </div>
+
+                    <li style="margin-bottom: 15px;"><strong>Force 5GHz/6GHz:</strong> In your router settings, lock your Portal's MAC address to the 5GHz or 6GHz band. Disable "Smart Connect" or "Band Steering," which often forces the Portal onto the congested 2.4GHz band.</li>
+                    <li style="margin-bottom: 15px;"><strong>Reduce Output Overhead:</strong> Before starting your session, go to <strong>Settings > Screen and Video</strong> and toggle 120Hz and HDR to OFF. This reduces the workload on the internal video encoder.</li>
                 </ol>
             </div>
 
-            <div style="text-align: center; margin: 30px 0;">
-                <p><strong>Protect your Portal on the go.</strong></p>
-                <p>Lag isn't the only risk; the Portal's screen is notoriously prone to scratches during travel.</p>
-                <a href="ps-portal-accessories.html" class="amazon-button" style="background: #0070d1;">View Verified Portal Cases & Accessories</a>
+            <!-- 4. ACTIVE CTA (Call to Action) -->
+            <div style="text-align: center; margin: 40px 0; border: 1px dashed #333; padding: 20px;">
+                <p style="margin-top: 0;"><strong>Protect your Portal on the go.</strong></p>
+                <p>Network lag is annoying, but a cracked 8-inch screen is permanent. We've verified these travel cases for fit and impact protection.</p>
+                <a href="ps-portal-accessories.html" class="amazon-button" style="background: #0070d1; padding: 15px 30px; font-weight: bold;">View Verified Portal Cases & Accessories</a>
             </div>
         </section>
 
@@ -53,9 +128,10 @@
             <hr>
             <h3>Related Manuals</h3>
             <ul>
-                <li><a href="ps-portal-accessories.html">Portal Hardware Guide</a></li>
-                <li><a href="best-ps5-hdmi-cables.html">Best Ethernet Cables for PS5</a></li>
-                <li><a href="how-to-enable-120hz-ps5.html">Understanding Display Output</a></li>
+                <!-- 6. THE "VS" INTERLINK -->
+                <li><a href="ps-portal-accessories.html">Portal Screen Protectors vs. Hard Cases: What do you need?</a></li>
+                <li><a href="best-ps5-hdmi-cables.html">Best Ethernet Cables for Zero-Lag Remote Play</a></li>
+                <li><a href="how-to-enable-120hz-ps5.html">How 120Hz Settings Affect Remote Streaming</a></li>
             </ul>
         </div>
     </div>
