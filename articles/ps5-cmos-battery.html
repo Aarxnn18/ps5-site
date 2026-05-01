@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
+
+    <!-- 1. JSON-LD HOWTO SCHEMA (Technical SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Replace the PS5 CMOS Battery",
+      "description": "Advanced hardware guide for replacing the CR2032 Lithium battery on the PS5 and PS5 Pro motherboard to fix clock reset errors.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Perform a full teardown to access the internal motherboard shielding."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Locate the circular CR2032 battery socket near the Southbridge chipset."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Use a non-conductive spudger to release the battery metal tab."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Insert a new CR2032 3V cell with the positive (+) side facing up."
+        }
+      ],
+      "totalTime": "PT60M",
+      "supply": {
+        "@type": "HowToSupply",
+        "name": "CR2032 3V Lithium Battery"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "T8 Security Torx Driver"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Anti-static Spudger"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="article-page">
     <div class="article-content">
@@ -17,40 +60,56 @@
 
         <header class="article-header">
             <h1>PS5 CMOS Battery: Preservation & Replacement</h1>
-            <p class="article-meta">Deep Hardware Repair | 2026 Manual</p>
+            <p class="article-meta">Deep Hardware Repair | Updated May 2026</p>
         </header>
         
         <div class="img-container">
-            <img src="../images/cmos-hero.jpg" class="featured-image" alt="PS5 Motherboard CMOS Battery">
+            <img src="../images/cmos-hero.jpg" class="featured-image" alt="PS5 Motherboard CMOS Battery Replacement 2026">
         </div>
 
         <section class="body-text">
             <h2>Why the CMOS Battery Matters</h2>
-            <p>The CR2032 Lithium battery on the motherboard powers the "Real-Time Clock" (RTC). If this battery fails, your PS5 will lose its date and time settings every time it is unplugged. In a "no-internet" scenario, this can prevent digital games from launching due to license verification logic.</p>
+            <p>The CR2032 Lithium battery on the motherboard powers the "Real-Time Clock" (RTC). If this battery fails, your PS5 will lose its date and time settings every time it is unplugged. In a "no-internet" scenario, this can prevent digital games from launching due to license verification logic. On the **PS5 Pro**, maintaining this clock is essential for the PSSR AI-scaling timestamps.</p>
 
-            <blockquote>
-                <strong>Repair Note:</strong> This is a "Deep Teardown" repair. You will encounter several screw types, including Security Torx and various Phillips lengths. To avoid stripping the chassis, we recommend using the precision drivers found in our <a href="best-ps5-toolkits.html">Best PS5 Toolkits</a> guide.
-            </blockquote>
+            <!-- 2. PRE-FLIGHT CHECKLIST (Conversion UI) -->
+            <div style="background: #1a1a1a; border: 1px solid #0070d1; border-left: 8px solid #0070d1; padding: 25px; margin: 30px 0; border-radius: 4px;">
+                <h3 style="color: #0070d1; margin-top: 0; display: flex; align-items: center;">
+                    <span style="margin-right: 10px;">🛠️</span> Teardown Essentials
+                </h3>
+                <p style="color: #eee;">This is a high-risk repair. Using the wrong tools will strip the internal security screws:</p>
+                <ul style="color: #ccc; line-height: 1.8;">
+                    <li><strong>Precision:</strong> T8 Security Torx & Phillips #00 (See <a href="best-ps5-toolkits.html" style="color: #0070d1; font-weight: bold;">Verified Repair Kits</a>).</li>
+                    <li><strong>Safety:</strong> <a href="#" style="color: #0070d1; font-weight: bold;">Anti-Static Wrist Strap</a> to prevent motherboard short-circuits.</li>
+                    <li><strong>Organization:</strong> <a href="#" style="color: #0070d1; font-weight: bold;">Magnetic Project Mat</a> (Crucial for tracking 40+ screws).</li>
+                    <li><strong>Consumables:</strong> Fresh CR2032 Lithium Coin Cells (Multipack recommended).</li>
+                </ul>
+            </div>
 
             <h2>Step-by-Step Replacement</h2>
             <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; border-left: 4px solid #0070d1;">
                 <ol style="margin-left: 20px;">
-                    <li style="margin-bottom: 15px;"><strong>Full Disassembly:</strong> This is an advanced repair. You must remove the plates, the fan, and the main plastic housing to access the motherboard shielded plate.</li>
-                    <li style="margin-bottom: 15px;"><strong>Efficiency Tip:</strong> Since you have to remove the fan to get to the CMOS battery, consider checking your fan model. If you have the louder 17-blade version, see our <a href="ps5-fan-replacement.html">Fan Replacement Guide</a> to swap it while the console is open.</li>
-                    <li style="margin-bottom: 15px;"><strong>Locate the Battery:</strong> On the standard PS5 motherboard, the CMOS battery is housed in a circular plastic socket near the Southbridge chipset.</li>
-                    <li style="margin-bottom: 15px;"><strong>Release the Cell:</strong> Use a non-conductive plastic spudger to gently push the metal tab. The battery will pop upward.</li>
-                    <li style="margin-bottom: 15px;"><strong>Insert New Hardware:</strong> Replace it with a fresh <strong>CR2032 3V Lithium cell</strong>. Ensure the "plus" (+) side is facing up.</li>
+                    <li style="margin-bottom: 15px;"><strong>Full Disassembly:</strong> You must remove the plates, fan, and main plastic housing. This reveals the inner metal shield that protects the motherboard.</li>
+                    
+                    <!-- 3. HIGH-INTENT WARNING (Safety/Sales Trigger) -->
+                    <div style="background: #ffcc0022; border: 1px solid #ffcc00; color: #fff; padding: 10px; margin: 10px 0; font-size: 0.9rem; border-radius: 4px;">
+                        <strong>⚠️ Tech Tip:</strong> Once the metal shield is removed, you will expose the Liquid Metal thermal compound. Do not touch or wipe this. If it spills, you will need a <a href="#" style="color: #ffcc00; text-decoration: underline;">Liquid Metal Replacement Kit</a> to avoid overheating.
+                    </div>
+
+                    <li style="margin-bottom: 15px;"><strong>Locate the Battery:</strong> On the PS5 motherboard, the CMOS battery is in a circular socket near the Southbridge chipset.</li>
+                    <li style="margin-bottom: 15px;"><strong>Release the Cell:</strong> Use a non-conductive spudger to gently push the metal tab. The battery will pop upward.</li>
+                    <li style="margin-bottom: 15px;"><strong>Insert New Hardware:</strong> Replace it with a fresh <strong>CR2032 3V Lithium cell</strong>. Ensure the (+) side faces up.</li>
                 </ol>
             </div>
 
-            <div style="text-align: center; margin: 30px 0;">
-                <p><strong>Are you prepared for a full teardown?</strong></p>
-                <p>Don't start this repair without a magnetic work mat and a T8 Security bit.</p>
-                <a href="best-ps5-toolkits.html" class="amazon-button" style="background: #0070d1;">View Essential Repair Toolkits</a>
+            <!-- 4. ACTIVE CTA (Call to Action) -->
+            <div style="text-align: center; margin: 40px 0; border: 1px dashed #333; padding: 20px;">
+                <p style="margin-top: 0;"><strong>Need a reliable toolkit for this teardown?</strong></p>
+                <p>Don't risk stripping your PS5's unique internal security screws with hardware store tools.</p>
+                <a href="best-ps5-toolkits.html" class="amazon-button" style="background: #0070d1; padding: 15px 30px; font-weight: bold;">View Pro-Grade PS5 Toolkits</a>
             </div>
 
             <div style="margin: 30px 0; padding: 20px; background: #001a33; border-radius: 8px; border: 1px solid #0070d1;">
-                <p><strong>⚠️ Warning:</strong> Opening the inner metal shielding of the PS5 may void your manufacturer warranty. Only perform this repair if your console is out of warranty and experiencing "Clock Reset" errors.</p>
+                <p><strong>⚠️ Warning:</strong> Opening the inner metal shielding voids your warranty. Only perform this if your console is out of warranty and experiencing "Clock Reset" errors.</p>
             </div>
         </section>
 
@@ -58,8 +117,9 @@
             <hr>
             <h3>Related Manuals</h3>
             <ul>
-                <li><a href="ps5-fan-replacement.html">Fan Upgrade While Disassembled</a></li>
-                <li><a href="how-to-fix-hdmi-cec.html">Fixing System "Handshake" Issues</a></li>
+                <!-- 6. THE "VS" INTERLINK -->
+                <li><a href="ps5-fan-replacement.html">Silent Fan Upgrade: Which Brand is Actually Best?</a></li>
+                <li><a href="how-to-fix-hdmi-cec.html">Fixing "No Signal" Handshake Issues After Reassembly</a></li>
             </ul>
         </div>
     </div>
