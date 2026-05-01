@@ -7,6 +7,39 @@
     <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
+
+    <!-- 1. JSON-LD HOWTO SCHEMA (Technical SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Fix PS5 HDMI-CEC Sync Issues",
+      "description": "Troubleshooting guide for fixing HDMI Device Link and 'One-Touch Play' synchronization between PlayStation 5 and modern 4K/8K TVs.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Enable HDMI Device Link in the PS5 System Settings."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Identify and enable your TV's specific CEC protocol (e.g., BRAVIA Sync, Anynet+)."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Perform a 'Cold Boot' by unplugging hardware to reset the HDMI handshake."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Verify Pin 13 continuity using a certified Ultra High Speed HDMI 2.1 cable."
+        }
+      ],
+      "totalTime": "PT15M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "Certified HDMI 2.1 Cable"
+      }
+    }
+    </script>
 </head>
 <body class="article-page">
     <div class="article-content">
@@ -17,26 +50,54 @@
 
         <header class="article-header">
             <h1>Troubleshooting HDMI-CEC & "One-Touch Play"</h1>
-            <p class="article-meta">Hardware Synchronization | Updated April 2026</p>
+            <p class="article-meta">Hardware Synchronization | Updated May 2026</p>
         </header>
         
         <div class="img-container">
-            <img src="../images/hdmi-sync.jpg" class="featured-image" alt="PS5 HDMI Settings Menu">
+            <img src="../images/hdmi-sync.jpg" class="featured-image" alt="PS5 Pro HDMI-CEC Troubleshooting 2026">
         </div>
 
         <section class="body-text">
             <h2>The Handshake Problem</h2>
-            <p>HDMI-CEC (Consumer Electronics Control) allows your PS5 to turn on your TV automatically. However, different brands use unique trade names that can cause software conflicts. If your TV switches inputs randomly, it's likely a "handshake" error.</p>
+            <p>HDMI-CEC (Consumer Electronics Control) allows your PS5 to turn on your TV automatically. However, different brands use unique trade names that can cause software conflicts. On the **PS5 Pro**, enhanced power states can sometimes confuse older 4K displays, leading to "no signal" errors or random input switching. This is almost always a "handshake" error caused by protocol mismatch.</p>
+
+            <!-- 2. BRAND PROTOCOL TABLE (Conversion UI) -->
+            <div style="overflow-x: auto; margin: 30px 0;">
+                <table style="width: 100%; border-collapse: collapse; background: #1a1a1a; color: #ccc; border-radius: 8px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #0070d1;">
+                            <th style="padding: 15px; text-align: left;">TV Brand</th>
+                            <th style="padding: 15px; text-align: left;">CEC Trade Name</th>
+                            <th style="padding: 15px; text-align: left;">Integration Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 15px;">Sony</td>
+                            <td style="padding: 15px;">BRAVIA Sync</td>
+                            <td style="padding: 15px; color: #00ff00;">Native (Best)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 15px;">LG</td>
+                            <td style="padding: 15px;">SimpLink</td>
+                            <td style="padding: 15px; color: #00ff00;">High</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #333;">
+                            <td style="padding: 15px;">Samsung</td>
+                            <td style="padding: 15px;">Anynet+</td>
+                            <td style="padding: 15px; color: #ffcc00;">Moderate</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;">Vizio/Hisense</td>
+                            <td style="padding: 15px;">CEC</td>
+                            <td style="padding: 15px; color: #ff4444;">Basic</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <blockquote>
-                <strong>Brand Protocol Map:</strong> To fix this, you must find your TV's specific name for CEC. 
-                <ul>
-                    <li><strong>Sony:</strong> BRAVIA Sync</li>
-                    <li><strong>LG:</strong> SimpLink</li>
-                    <li><strong>Samsung:</strong> Anynet+</li>
-                    <li><strong>Vizio:</strong> CEC</li>
-                </ul>
-                If your current TV doesn't support these features reliably, see our <a href="best-ps5-oled-tvs.html">Best PS5 OLED TVs</a> for perfect 2026 integration.
+                <strong>Performance Warning:</strong> If your current display doesn't support these features reliably—or if you're experiencing "ghost power-ons"—it may be time to upgrade to a panel with better 2026 gaming firmware. See our <a href="best-ps5-oled-tvs.html">Best PS5 OLED TVs</a> guide.
             </blockquote>
 
             <h2>Step-by-Step Fix</h2>
@@ -44,15 +105,22 @@
                 <ol style="margin-left: 20px;">
                     <li style="margin-bottom: 15px;"><strong>Console Activation:</strong> Go to <strong>Settings > System > HDMI</strong>. Ensure <strong>Enable HDMI Device Link</strong> is toggled ON.</li>
                     <li style="margin-bottom: 15px;"><strong>Power Off Link:</strong> Toggle <strong>Enable Power Off Link</strong> to ON so your TV sleeps when the PS5 shuts down.</li>
-                    <li style="margin-bottom: 15px;"><strong>The "Cold Boot" Reset:</strong> If sync fails, unplug both the TV and PS5 for 60 seconds. This clears the "Handshake Cache" in the HDMI controllers.</li>
-                    <li style="margin-bottom: 15px;"><strong>Cable Verification:</strong> CEC uses Pin 13. If your cable is low-quality or damaged, this signal drops. Check our <a href="how-to-spot-fake-hdmi-21.html">Verification Guide</a> to see if your cable is a "fake" 2.1.</li>
+                    <li style="margin-bottom: 15px;"><strong>The "Cold Boot" Reset:</strong> If sync fails, unplug both the TV and PS5 from the wall for 60 seconds. This drains the capacitors and clears the "Handshake Cache" in the HDMI controllers.</li>
+                    
+                    <!-- 3. HIGH-INTENT WARNING (Hardware Trigger) -->
+                    <div style="background: #ffcc0022; border: 1px solid #ffcc00; color: #fff; padding: 10px; margin: 10px 0; font-size: 0.9rem; border-radius: 4px;">
+                        <strong>⚠️ Tech Tip:</strong> HDMI-CEC data travels specifically via <strong>Pin 13</strong>. In many "fake" or budget cables, this pin is poorly shielded, causing signal noise that breaks the sync. Verify your cable quality with our <a href="how-to-spot-fake-hdmi-21.html" style="color: #ffcc00; text-decoration: underline;">Verification Guide</a>.
+                    </div>
+
+                    <li style="margin-bottom: 15px;"><strong>Cable Verification:</strong> Swap to the original cable included with the PS5. If the issue resolves, your previous cable was likely an older 18Gbps (HDMI 2.0) lead.</li>
                 </ol>
             </div>
 
-            <div style="text-align: center; margin: 30px 0;">
-                <p><strong>Is your cable dropping the handshake?</strong></p>
-                <p>Don't let a $10 cable ruin your $500 console experience. We recommend these verified leads.</p>
-                <a href="best-ps5-hdmi-cables.html" class="amazon-button" style="background: #0070d1;">View Certified HDMI 2.1 Cables</a>
+            <!-- 4. ACTIVE CTA (Call to Action) -->
+            <div style="text-align: center; margin: 40px 0; border: 1px dashed #333; padding: 20px;">
+                <p style="margin-top: 0;"><strong>Is your cable dropping the handshake?</strong></p>
+                <p>Don't let a $10 budget cable ruin your 2026 gaming experience. We recommend these verified leads for flawless CEC sync.</p>
+                <a href="best-ps5-hdmi-cables.html" class="amazon-button" style="background: #0070d1; padding: 15px 30px; font-weight: bold;">View Certified HDMI 2.1 Cables</a>
             </div>
         </section>
 
@@ -60,9 +128,10 @@
             <hr>
             <h3>Related Manuals</h3>
             <ul>
-                <li><a href="best-ps5-hdmi-cables.html">Certified Cable Identification</a></li>
-                <li><a href="how-to-spot-fake-hdmi-21.html">Spotting Fake 2.1 Hardware</a></li>
-                <li><a href="best-ps5-oled-tvs.html">Top 2026 Gaming Displays</a></li>
+                <!-- 6. THE "VS" INTERLINK -->
+                <li><a href="best-ps5-hdmi-cables.html">Certified vs. Non-Certified Cables: Does it Matter for CEC?</a></li>
+                <li><a href="how-to-spot-fake-hdmi-21.html">How to Identify Counterfeit 48Gbps Hardware</a></li>
+                <li><a href="best-ps5-oled-tvs.html">Top 2026 Gaming Displays for PS5 Pro</a></li>
             </ul>
         </div>
     </div>
