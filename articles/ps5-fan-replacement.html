@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
+
+    <!-- 1. JSON-LD HOWTO SCHEMA (Technical SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Replace or Upgrade the PS5 Cooling Fan",
+      "description": "Professional hardware manual for identifying the 'Fan Lottery' and swapping the internal cooling unit for silent operation.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Remove faceplates and unscrew the fan intake grill using a T8 Security bit."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Gently disconnect the 3-pin fan power terminal from the motherboard."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Remove the four long mounting screws and lift the fan unit out."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Insert the replacement NMB or Delta silent fan and reassemble."
+        }
+      ],
+      "totalTime": "PT15M",
+      "supply": {
+        "@type": "HowToSupply",
+        "name": "NMB or Delta PS5 Replacement Fan"
+      },
+      "tool": {
+        "@type": "HowToTool",
+        "name": "T8 Security Torx Screwdriver"
+      }
+    }
+    </script>
 </head>
 <body class="article-page">
     <div class="article-content">
@@ -17,20 +54,30 @@
 
         <header class="article-header">
             <h1>PS5 Internal Fan Upgrade: Nidec vs. Delta vs. NMB</h1>
-            <p class="article-meta">Hardware Modification | Updated April 2026</p>
+            <p class="article-meta">Hardware Modification | Updated May 2026</p>
         </header>
         
         <div class="img-container">
-            <img src="../images/fan-hero.jpg" class="featured-image" alt="PS5 Internal Cooling Fan">
+            <img src="../images/fan-hero.jpg" class="featured-image" alt="PS5 Cooling Fan Replacement 2026">
         </div>
 
         <section class="body-text">
             <h2>The "Fan Lottery" Explained</h2>
-            <p>Not all PS5 consoles are built with the same cooling hardware. Sony utilizes three different fan manufacturers. Some fans have 17 blades, while others have 23. If your console has a high-pitched "UFO" whistling sound, it is likely due to the blade frequency of your specific fan model.</p>
+            <p>Not all PS5 consoles are built with the same cooling hardware. Sony utilizes three different fan manufacturers. Some fans have 17 blades, while others have 23. If your console has a high-pitched "UFO" whistling sound, it is likely due to the blade frequency of your specific fan model. This remains a relevant issue for the PS5 Pro's high-performance thermal demands in 2026.</p>
 
-            <blockquote>
-                <strong>Tech Note:</strong> To perform this swap safely, you must use a T8 Security bit. Standard tools will strip these specialized screws instantly. See our <a href="best-ps5-toolkits.html">Best PS5 Toolkits</a> guide for the exact drivers used in this manual.
-            </blockquote>
+            <!-- 2. PRE-FLIGHT CHECKLIST (Conversion UI) -->
+            <div style="background: #1a1a1a; border: 1px solid #0070d1; border-left: 8px solid #0070d1; padding: 25px; margin: 30px 0; border-radius: 4px;">
+                <h3 style="color: #0070d1; margin-top: 0; display: flex; align-items: center;">
+                    <span style="margin-right: 10px;">🛡️</span> Required Tools & Parts
+                </h3>
+                <p style="color: #eee;">To perform this swap without stripping specialized screws or damaging the terminal:</p>
+                <ul style="color: #ccc; line-height: 1.8;">
+                    <li><strong>Specialized Driver:</strong> A T8 Security Torx bit is mandatory (See <a href="best-ps5-toolkits.html" style="color: #0070d1; font-weight: bold;">Precision Toolkits</a>).</li>
+                    <li><strong>Thermal Safety:</strong> Anti-static tweezers for the 3-pin power connector.</li>
+                    <li><strong>Debris Removal:</strong> Since the console is open, use <a href="#" style="color: #0070d1; font-weight: bold;">Canned Air (Anti-Moisture)</a> to clear the heatsink.</li>
+                    <li><strong>The Fan:</strong> A verified NMB V3 or Delta 23-blade replacement unit.</li>
+                </ul>
+            </div>
 
             <h2>Comparison of 2026 Replacement Options</h2>
             <table style="width:100%; border-collapse: collapse; margin: 20px 0; background: #1a1a1a; color: white;">
@@ -64,16 +111,23 @@
             <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; border-left: 4px solid #0070d1;">
                 <ol style="margin-left: 20px;">
                     <li style="margin-bottom: 15px;"><strong>Safety First:</strong> Ensure the PS5 is unplugged. Remove the plates and the top intake grill using a <strong>T8 Security Torx</strong> screwdriver.</li>
+                    
+                    <!-- 3. HIGH-INTENT WARNING (Safety Trigger) -->
+                    <div style="background: #ffcc0022; border: 1px solid #ffcc00; color: #fff; padding: 10px; margin: 10px 0; font-size: 0.9rem; border-radius: 4px;">
+                        <strong>⚠️ Warning:</strong> Standard Torx T8 drivers will not fit. You must use the "Security" version with a hole in the center. Attempting to use a standard bit will permanently strip the head. Get the correct <a href="best-ps5-toolkits.html" style="color: #ffcc00; text-decoration: underline;">Security T8 Bit here</a>.
+                    </div>
+
                     <li style="margin-bottom: 15px;"><strong>Expose the Connector:</strong> Carefully lift the plastic shroud covering the fan's power terminal.</li>
-                    <li style="margin-bottom: 15px;"><strong>Disconnect Power:</strong> Use tweezers to gently pull the 3-pin fan connector straight up. Do not pull by the wires.</li>
-                    <li style="margin-bottom: 15px;"><strong>Swap the Unit:</strong> Remove the four long screws securing the fan, lift the old unit out, and drop the new "Silent" NMB or Delta fan in its place.</li>
-                    <li style="margin-bottom: 15px;"><strong>Pro Tip:</strong> While the fan is removed, you have clear access to the deep internal heatsink. This is also the best time to install an <a href="ssd-ps5.html">M.2 SSD</a> while the console is already open on your workbench.</li>
+                    <li style="margin-bottom: 15px;"><strong>Disconnect Power:</strong> Use <a href="#" style="color: #0070d1; text-decoration: underline;">precision tweezers</a> to gently pull the 3-pin fan connector straight up. Do not pull by the wires.</li>
+                    <li style="margin-bottom: 15px;"><strong>Swap the Unit:</strong> Remove the four long screws, lift the old unit out, and drop the new "Silent" NMB or Delta fan in its place.</li>
                 </ol>
             </div>
 
-            <div style="text-align: center; margin: 30px 0;">
-                <p><strong>Missing the T8 Security Driver?</strong></p>
-                <a href="best-ps5-toolkits.html" class="amazon-button" style="background: #0070d1;">View Precision Toolkits</a>
+            <!-- 4. ACTIVE CTA (Call to Action) -->
+            <div style="text-align: center; margin: 40px 0; border: 1px dashed #333; padding: 20px;">
+                <p style="margin-top: 0;"><strong>Need a Silent Fan or T8 Security Bit?</strong></p>
+                <p>Don't settle for a noisy console. Ensure you have the right tools for a safe swap.</p>
+                <a href="best-ps5-toolkits.html" class="amazon-button" style="background: #0070d1; padding: 15px 30px; font-weight: bold;">Check Toolkits & Silent Fan Prices</a>
             </div>
         </section>
 
@@ -81,8 +135,9 @@
             <hr>
             <h3>Related Manuals</h3>
             <ul>
-                <li><a href="how-to-clean-ps5.html">Deep Cleaning Without Disassembly</a></li>
-                <li><a href="ps5-pro-settings.html">Optimizing Pro Thermal Settings</a></li>
+                <!-- 6. THE "VS" INTERLINK -->
+                <li><a href="how-to-clean-ps5.html">Canned Air vs. Vacuum: The Best Way to Clean a PS5</a></li>
+                <li><a href="ssd-ps5.html">Best M.2 SSDs for the 2026 PS5 Pro</a></li>
             </ul>
         </div>
     </div>
@@ -92,4 +147,5 @@
     </footer>
 </body>
 </html>
+
 
