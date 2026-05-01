@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
+
+    <!-- 1. JSON-LD HOWTO SCHEMA (Technical SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calibrate DualSense Thumbsticks",
+      "description": "Comprehensive guide for calibrating analog sticks, adjusting deadzones, and fixing minor stick drift on PS5 DualSense controllers.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Clean the analog stick base using 90% Isopropyl Alcohol."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Navigate to Settings > Accessibility > Controls to view raw input."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Connect to a PC for real-time center-point calibration."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Adjust in-game deadzones to negate minor hardware variance."
+        }
+      ],
+      "totalTime": "PT15M",
+      "supply": {
+        "@type": "HowToSupply",
+        "name": "90% Isopropyl Alcohol"
+      },
+      "tool": {
+        "@type": "HowToTool",
+        "name": "Precision Cotton Swabs"
+      }
+    }
+    </script>
 </head>
 <body class="article-page">
     <div class="article-content">
@@ -17,16 +54,30 @@
 
         <header class="article-header">
             <h1>Calibrating Analog Sticks & Deadzones</h1>
-            <p class="article-meta">Precision Tuning | Updated April 2026</p>
+            <p class="article-meta">Precision Tuning | Updated May 2026</p>
         </header>
         
         <div class="img-container">
-            <img src="../images/calibrate-hero.jpg" class="featured-image" alt="DualSense Calibration UI">
+            <img src="../images/calibrate-hero.jpg" class="featured-image" alt="PS5 Pro Controller Calibration 2026">
         </div>
 
         <section class="body-text">
             <h2>Combatting "Input Variance"</h2>
-            <p>Even without hardware drift, every DualSense controller has a slight variance in its "Center" point. When adding high-rise thumbsticks, this variance is magnified. Proper calibration ensures that your sticks respond to the slightest touch without drifting when idle.</p>
+            <p>Even without hardware drift, every DualSense controller has a slight variance in its "Center" point. When adding high-rise thumbsticks, this variance is magnified. On the **PS5 Pro**, high-polling rate inputs make these tiny deviations more noticeable in competitive titles. Proper calibration ensures that your sticks respond to the slightest touch without drifting when idle.</p>
+
+            <!-- 2. PRECISION & GRIP CHECKLIST (Conversion UI) -->
+            <div style="background: #1a1a1a; border: 1px solid #0070d1; border-left: 8px solid #0070d1; padding: 25px; margin: 30px 0; border-radius: 4px;">
+                <h3 style="color: #0070d1; margin-top: 0; display: flex; align-items: center;">
+                    <span style="margin-right: 10px;">🎯</span> The Precision Toolkit
+                </h3>
+                <p style="color: #eee;">Software tuning is more effective when the physical hardware is optimized:</p>
+                <ul style="color: #ccc; line-height: 1.8;">
+                    <li><strong>Mechanical Range:</strong> Increase leverage and accuracy with <a href="best-ps5-thumbsticks.html" style="color: #0070d1; font-weight: bold;">Performance Thumbsticks</a>.</li>
+                    <li><strong>Sensor Cleaning:</strong> Use <a href="#" style="color: #0070d1; font-weight: bold;">90% Isopropyl Alcohol & Swabs</a> to clear debris from the internal housing.</li>
+                    <li><strong>Control:</strong> Add <a href="#" style="color: #0070d1; font-weight: bold;">Precision Rings</a> to the stick base for physical resistance and over-travel prevention.</li>
+                    <li><strong>Maintenance:</strong> Use <a href="#" style="color: #0070d1; font-weight: bold;">Compressed Air</a> to clear out dust without opening the shell.</li>
+                </ul>
+            </div>
 
             <blockquote>
                 <strong>Performance Tip:</strong> Software calibration can only do so much if your physical stick caps are worn down. For better grip and increased range of motion, see our <a href="best-ps5-thumbsticks.html">Best Performance Thumbsticks</a> guide.
@@ -35,18 +86,25 @@
             <h2>Step-by-Step Instructions</h2>
             <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; border-left: 4px solid #0070d1;">
                 <ol style="margin-left: 20px;">
-                    <li style="margin-bottom: 15px;"><strong>Physical Cleanse:</strong> Use a cotton swab lightly soaked in 90% Isopropyl Alcohol. Rotate the stick and clean the "ball" base to remove skin oils that cause friction.</li>
+                    <li style="margin-bottom: 15px;"><strong>Physical Cleanse:</strong> Lightly soak a cotton swab in alcohol. Rotate the stick and clean the "ball" base to remove skin oils that cause friction.</li>
+                    
+                    <!-- 3. HIGH-INTENT WARNING (Safety/Tech Trigger) -->
+                    <div style="background: #ffcc0022; border: 1px solid #ffcc00; color: #fff; padding: 10px; margin: 10px 0; font-size: 0.9rem; border-radius: 4px;">
+                        <strong>⚠️ Tech Tip:</strong> If cleaning the base doesn't work, you likely have debris inside the potentiometer. We recommend a <a href="best-ps5-toolkits.html" style="color: #ffcc00; text-decoration: underline;">Precision Repair Kit</a> to safely open the controller and access the sensors.
+                    </div>
+
                     <li style="margin-bottom: 15px;"><strong>Access Calibration:</strong> On PS5, go to <strong>Settings > Accessibility > Controls > Adjust Controller Settings</strong> to view raw input data.</li>
-                    <li style="margin-bottom: 15px;"><strong>Browser Calibration:</strong> For deep tuning, connect your controller to a PC via USB and visit <code>dualshock-tools.github.io</code>. This 2026 tool allows you to see your "Stick Center" in real-time.</li>
-                    <li style="margin-bottom: 15px;"><strong>Deadzone Setting:</strong> If your stick has a 1-2% variance, go into your game's "Advanced Controls" and set your <strong>Inner Deadzone</strong> to 0.03 or 3% to negate the movement.</li>
-                    <li style="margin-bottom: 15px;"><strong>Hardware Reset:</strong> If software tuning fails, use a pin to hold the reset button on the back of the controller for 5 seconds to clear the onboard memory.</li>
+                    <li style="margin-bottom: 15px;"><strong>Browser Calibration:</strong> For deep tuning, connect your controller to a PC via USB. Modern 2026 web-tools allow you to visualize your "Stick Center" and circularity errors in real-time.</li>
+                    <li style="margin-bottom: 15px;"><strong>Deadzone Setting:</strong> If your stick has a 1-2% variance, go into your game's "Advanced Controls" and set your <strong>Inner Deadzone</strong> to 0.03 (3%) to negate the phantom movement.</li>
+                    <li style="margin-bottom: 15px;"><strong>Hardware Reset:</strong> If software tuning fails, use a pin to hold the reset button on the back for 5 seconds to clear the onboard memory.</li>
                 </ol>
             </div>
 
-            <div style="text-align: center; margin: 30px 0;">
-                <p><strong>Is your stick drift beyond a software fix?</strong></p>
-                <p>You may need to open the controller to clean the potentiometer sensors directly.</p>
-                <a href="best-ps5-toolkits.html" class="amazon-button" style="background: #0070d1;">View Necessary Repair Tools</a>
+            <!-- 4. ACTIVE CTA (Call to Action) -->
+            <div style="text-align: center; margin: 40px 0; border: 1px dashed #333; padding: 20px;">
+                <p style="margin-top: 0;"><strong>Is your stick drift beyond a software fix?</strong></p>
+                <p>Sometimes the internal springs or sensors are simply too worn for calibration to work.</p>
+                <a href="best-ps5-thumbsticks.html" class="amazon-button" style="background: #0070d1; padding: 15px 30px; font-weight: bold;">Check Prices for New DualSense Controllers</a>
             </div>
         </section>
 
@@ -54,7 +112,8 @@
             <hr>
             <h3>Related Manuals</h3>
             <ul>
-                <li><a href="best-ps5-thumbsticks.html">Best Performance Thumbsticks</a></li>
+                <!-- 6. THE "VS" INTERLINK -->
+                <li><a href="best-ps5-thumbsticks.html">Standard vs. Hall Effect Sticks: Which Ends Drift Permanently?</a></li>
                 <li><a href="how-to-calibrate-controller.html">Controller Sync & Reset Guide</a></li>
             </ul>
         </div>
