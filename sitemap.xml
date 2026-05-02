@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url><loc>https://aarxnn18.github.io/ps5-site/</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/contact.html</loc></url>
 
-  <url>
-    <loc>https://aarxnn18.github.io/ps5-site/</loc>
-  </url>
+  <!-- Core Buying Articles -->
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ssd-ps5.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-controllers.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-headsets.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-racing-wheels.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-streaming-gear.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps-portal-accessories.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-ps5-monitors.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-ps5-oled-tvs.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-ps5-hdmi-cables.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-ps5-soundbars.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-ps5-toolkits.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-ps5-thumbsticks.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/psvr2-guide.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/best-external-ssd-enclosures.html</loc></url>
 
-  <url>
-    <loc>https://aarxnn18.github.io/ps5-site/articles/ssd-ps5.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aarxnn18.github.io/ps5-site/articles/ps5-controllers.html</loc>
-  </url>
-
-  <url>
-    <loc>https://aarxnn18.github.io/ps5-site/articles/ps5-headsets.html</loc>
-  </url>
-
+  <!-- How-To Guides -->
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-calibrate-controller.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-clean-ps5.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-enable-120hz-ps5.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-enable-ps5-3d-audio.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-fix-hdmi-cec.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-fix-portal-lag.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-install-ps5-ssd.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-move-ps5-games.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-pair-ps5-controller.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-setup-7-1-surround.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-setup-psvr2.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-setup-sim-rig.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-spot-fake-hdmi-21.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/how-to-stream.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-cmos-battery.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-fan-replacement.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/dualsense-edge-repair.html</loc></url>
+  <url><loc>https://aarxnn18.github.io/ps5-site/articles/ps5-pro-settings.html</loc></url>
 </urlset>
+
