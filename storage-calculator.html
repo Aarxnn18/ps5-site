@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS5 Pro Storage Calculator | The Hardware Manual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ps-blue: #00439C;
+            --ps-light-blue: #0070D1;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-white: #ffffff;
+            --accent-green: #2ecc71;
+            --accent-red: #e74c3c;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .calculator-container {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+
+        h1 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.5rem;
+            color: var(--ps-light-blue);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--ps-light-blue);
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: #2a2a2a;
+            color: white;
+            border: 1px solid #444;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .game-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .game-item {
+            background: #2a2a2a;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .game-item input {
+            margin-right: 10px;
+        }
+
+        /* Results Section */
+        .results-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #111;
+            border-radius: 10px;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 25px;
+            background: #333;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--ps-blue);
+            transition: width 0.5s ease, background-color 0.5s ease;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+        }
+
+        /* Affiliate Recommendation Box */
+        #recommendation-box {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(145deg, #00439C, #001a3d);
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid var(--ps-light-blue);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: var(--text-white);
+            color: var(--ps-blue);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.7rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h1>Storage Manual</h1>
+        <p class="description">Calculate your PS5 Pro space before you install.</p>
+
+        <!-- Drive Selection -->
+        <div class="input-group">
+            <label for="drive-size">Select Console / SSD Size</label>
+            <select id="drive-size" onchange="calculateStorage()">
+                <option value="667">PS5 Standard (667GB Usable)</option>
+                <option value="1800" selected>PS5 Pro (Approx. 1.8TB Usable)</option>
+                <option value="1000">1TB M.2 Expansion Card</option>
+                <option value="2000">2TB M.2 Expansion Card</option>
+                <option value="4000">4TB M.2 Expansion Card</option>
+            </select>
+        </div>
+
+        <label>Select Games to Install</label>
+        <div class="game-list">
+            <!-- Massive AAA & 2026 Titles -->
+            <div class="game-item"><input type="checkbox" value="215" onchange="calculateStorage()"> CoD: Black Ops 6 (215GB)</div>
+            <div class="game-item"><input type="checkbox" value="150" onchange="calculateStorage()"> GTA VI (Est. 150GB)</div>
+            <div class="game-item"><input type="checkbox" value="175" onchange="calculateStorage()"> Warzone (175GB)</div>
+            <div class="game-item"><input type="checkbox" value="155" onchange="calculateStorage()"> Star Wars Outlaws (155GB)</div>
+            <div class="game-item"><input type="checkbox" value="130" onchange="calculateStorage()"> FFVII Rebirth (130GB)</div>
+            <div class="game-item"><input type="checkbox" value="125" onchange="calculateStorage()"> Monster Hunter Wilds (125GB)</div>
+            <div class="game-item"><input type="checkbox" value="100" onchange="calculateStorage()"> Ghost of Yotei (Est. 100GB)</div>
+            <div class="game-item"><input type="checkbox" value="90" onchange="calculateStorage()"> AC Shadows (90GB)</div>
+
+            <!-- Open World & RPGs -->
+            <div class="game-item"><input type="checkbox" value="120" onchange="calculateStorage()"> Cyberpunk 2077 (120GB)</div>
+            <div class="game-item"><input type="checkbox" value="115" onchange="calculateStorage()"> Spider-Man 2 (115GB)</div>
+            <div class="game-item"><input type="checkbox" value="110" onchange="calculateStorage()"> Baldur's Gate 3 (110GB)</div>
+            <div class="game-item"><input type="checkbox" value="105" onchange="calculateStorage()"> Red Dead 2 (105GB)</div>
+            <div class="game-item"><input type="checkbox" value="105" onchange="calculateStorage()"> God of War Ragnarok (105GB)</div>
+            <div class="game-item"><input type="checkbox" value="100" onchange="calculateStorage()"> Gran Turismo 7 (100GB)</div>
+            <div class="game-item"><input type="checkbox" value="95" onchange="calculateStorage()"> Elden Ring + DLC (95GB)</div>
+            <div class="game-item"><input type="checkbox" value="85" onchange="calculateStorage()"> Horizon Forbidden West (85GB)</div>
+            <div class="game-item"><input type="checkbox" value="70" onchange="calculateStorage()"> Ghost of Tsushima (70GB)</div>
+            <div class="game-item"><input type="checkbox" value="60" onchange="calculateStorage()"> Black Myth: Wukong (60GB)</div>
+            <div class="game-item"><input type="checkbox" value="55" onchange="calculateStorage()"> Skyrim Special Ed. (55GB)</div>
+            <div class="game-item"><input type="checkbox" value="50" onchange="calculateStorage()"> The Witcher 3 (50GB)</div>
+
+            <!-- Competitive & Shooters -->
+            <div class="game-item"><input type="checkbox" value="120" onchange="calculateStorage()"> Destiny 2 (120GB)</div>
+            <div class="game-item"><input type="checkbox" value="100" onchange="calculateStorage()"> Battlefield 2042 (100GB)</div>
+            <div class="game-item"><input type="checkbox" value="80" onchange="calculateStorage()"> Rainbow Six Siege (80GB)</div>
+            <div class="game-item"><input type="checkbox" value="60" onchange="calculateStorage()"> Overwatch 2 (60GB)</div>
+            <div class="game-item"><input type="checkbox" value="40" onchange="calculateStorage()"> Valorant (40GB)</div>
+            <div class="game-item"><input type="checkbox" value="35" onchange="calculateStorage()"> Helldivers 2 (35GB)</div>
+            <div class="game-item"><input type="checkbox" value="30" onchange="calculateStorage()"> Fortnite (30GB)</div>
+            <div class="game-item"><input type="checkbox" value="25" onchange="calculateStorage()"> Apex Legends (25GB)</div>
+
+            <!-- Sports & Racing -->
+            <div class="game-item"><input type="checkbox" value="160" onchange="calculateStorage()"> NBA 2K25 (160GB)</div>
+            <div class="game-item"><input type="checkbox" value="55" onchange="calculateStorage()"> EA Sports FC 25 (55GB)</div>
+            <div class="game-item"><input type="checkbox" value="80" onchange="calculateStorage()"> F1 24 (80GB)</div>
+            <div class="game-item"><input type="checkbox" value="65" onchange="calculateStorage()"> Madden NFL 25 (65GB)</div>
+            <div class="game-item"><input type="checkbox" value="50" onchange="calculateStorage()"> WWE 2K24 (50GB)</div>
+            <div class="game-item"><input type="checkbox" value="75" onchange="calculateStorage()"> MLB The Show 24 (75GB)</div>
+            <div class="game-item"><input type="checkbox" value="40" onchange="calculateStorage()"> Tekken 8 (40GB)</div>
+            <div class="game-item"><input type="checkbox" value="35" onchange="calculateStorage()"> Street Fighter 6 (35GB)</div>
+
+            <!-- Essentials, Apps & Indies -->
+            <div class="game-item"><input type="checkbox" value="45" onchange="calculateStorage()"> Astro Bot (45GB)</div>
+            <div class="game-item"><input type="checkbox" value="85" onchange="calculateStorage()"> Genshin Impact (85GB)</div>
+            <div class="game-item"><input type="checkbox" value="15" onchange="calculateStorage()"> Minecraft (15GB)</div>
+            <div class="game-item"><input type="checkbox" value="10" onchange="calculateStorage()"> Roblox (10GB)</div>
+            <div class="game-item"><input type="checkbox" value="20" onchange="calculateStorage()"> Rocket League (20GB)</div>
+            <div class="game-item"><input type="checkbox" value="8" onchange="calculateStorage()"> Fall Guys (8GB)</div>
+            <div class="game-item"><input type="checkbox" value="12" onchange="calculateStorage()"> Among Us (12GB)</div>
+            <div class="game-item"><input type="checkbox" value="5" onchange="calculateStorage()"> Stardew Valley (5GB)</div>
+            <div class="game-item"><input type="checkbox" value="4" onchange="calculateStorage()"> Cuphead (4GB)</div>
+            <div class="game-item"><input type="checkbox" value="3" onchange="calculateStorage()"> Hades (3GB)</div>
+            <div class="game-item"><input type="checkbox" value="1.5" onchange="calculateStorage()"> YouTube App (1.5GB)</div>
+            <div class="game-item"><input type="checkbox" value="1" onchange="calculateStorage()"> Netflix App (1GB)</div>
+            <div class="game-item"><input type="checkbox" value="2" onchange="calculateStorage()"> Spotify App (2GB)</div>
+        </div>
+
+        <!-- Results -->
+        <div class="results-box">
+            <div class="stats">
+                <span>Used: <span id="used-val">0</span> GB</span>
+                <span>Free: <span id="free-val">1800</span> GB</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="status-text" style="text-align:center; font-weight:700;"></p>
+        </div>
+
+        <!-- Affiliate Box -->
+        <div id="recommendation-box">
+            <h3 style="margin:0;">⚠️ Storage Critically Low!</h3>
+            <p style="font-size:0.85rem;">You don't have enough room for these games. Upgrade your PS5 Pro with our top-rated 2TB SSD.</p>
+            <a href="https://amzn.to/3OFbITh" class="buy-button" target="_blank">View Recommended SSD</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 The Hardware Manual - Independent PS5 Pro Testing
+    </footer>
+
+    <script>
+        function calculateStorage() {
+            const driveSize = parseInt(document.getElementById('drive-size').value);
+            const checkboxes = document.querySelectorAll('.game-item input[type="checkbox"]');
+            const progressBar = document.getElementById('progress-bar');
+            const recommendationBox = document.getElementById('recommendation-box');
+            
+            let totalUsed = 0;
+            checkboxes.forEach(cb => {
+                if(cb.checked) {
+                    totalUsed += parseInt(cb.value);
+                }
+            });
+
+            let percent = (totalUsed / driveSize) * 100;
+            let freeSpace = driveSize - totalUsed;
+
+            // Update Text
+            document.getElementById('used-val').innerText = totalUsed;
+            document.getElementById('free-val').innerText = freeSpace < 0 ? 0 : freeSpace;
+
+            // Update Progress Bar
+            progressBar.style.width = (percent > 100 ? 100 : percent) + "%";
+            
+            if (percent > 90) {
+                progressBar.style.backgroundColor = "var(--accent-red)";
+                document.getElementById('status-text').innerText = "STORAGE FULL";
+                document.getElementById('status-text').style.color = "var(--accent-red)";
+                recommendationBox.style.display = "block";
+            } else if (percent > 70) {
+                progressBar.style.backgroundColor = "#f1c40f"; // Warning Yellow
+                document.getElementById('status-text').innerText = "Running Low...";
+                document.getElementById('status-text').style.color = "#f1c40f";
+                recommendationBox.style.display = "block";
+            } else {
+                progressBar.style.backgroundColor = "var(--ps-light-blue)";
+                document.getElementById('status-text').innerText = "Plenty of Space";
+                document.getElementById('status-text').style.color = "var(--accent-green)";
+                recommendationBox.style.display = "none";
+            }
+        }
+
+        // Run once on load
+        calculateStorage();
+    </script>
+</body>
+</html>
+
