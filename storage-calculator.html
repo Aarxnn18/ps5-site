@@ -21,20 +21,43 @@
             background-color: var(--dark-bg);
             color: var(--text-white);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            width: 100%;
+            padding: 20px;
+            background: #1a1a1a;
+            border-bottom: 2px solid var(--ps-blue);
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .back-link {
+            color: var(--ps-light-blue);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
         }
 
         .calculator-container {
             background-color: var(--card-bg);
             border-radius: 15px;
             padding: 30px;
-            max-width: 600px;
-            width: 100%;
+            max-width: 800px;
+            width: 90%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border: 1px solid #333;
+            margin: 40px 0;
         }
 
         h1 {
@@ -79,7 +102,14 @@
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin-bottom: 25px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
         }
+
+        /* Custom Scrollbar for Game List */
+        .game-list::-webkit-scrollbar { width: 6px; }
+        .game-list::-webkit-scrollbar-thumb { background: var(--ps-blue); border-radius: 10px; }
 
         .game-item {
             background: #2a2a2a;
@@ -88,14 +118,10 @@
             display: flex;
             align-items: center;
             font-size: 0.85rem;
-            cursor: pointer;
         }
 
-        .game-item input {
-            margin-right: 10px;
-        }
+        .game-item input { margin-right: 10px; }
 
-        /* Results Section */
         .results-box {
             margin-top: 30px;
             padding: 20px;
@@ -116,7 +142,7 @@
             height: 100%;
             width: 0%;
             background: var(--ps-blue);
-            transition: width 0.5s ease, background-color 0.5s ease;
+            transition: width 0.5s ease;
         }
 
         .stats {
@@ -125,7 +151,6 @@
             font-weight: 700;
         }
 
-        /* Affiliate Recommendation Box */
         #recommendation-box {
             display: none;
             margin-top: 25px;
@@ -134,12 +159,6 @@
             border-radius: 10px;
             text-align: center;
             border: 2px solid var(--ps-light-blue);
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .buy-button {
@@ -154,20 +173,68 @@
             text-transform: uppercase;
         }
 
+        /* Bottom Recommended Articles */
+        .recommended-section {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'League Spartan', sans-serif;
+            color: var(--ps-light-blue);
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #333;
+            transition: transform 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--ps-light-blue);
+        }
+
+        .article-card h4 { margin: 0 0 10px 0; color: var(--ps-light-blue); }
+        .article-card p { margin: 0; font-size: 0.8rem; color: #bbb; }
+
         footer {
-            margin-top: 40px;
+            padding: 40px;
             font-size: 0.7rem;
             color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .game-list { grid-template-columns: 1fr; }
+            .article-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+    <nav class="top-nav">
+        <a href="index.html" class="back-link">← Back to Homepage</a>
+    </nav>
+
     <div class="calculator-container">
         <h1>Storage Manual</h1>
-        <p class="description">Calculate your PS5 Pro space before you install.</p>
+        <p class="description">Plan your PS5 Pro setup. Check the games you plan to keep installed.</p>
 
-        <!-- Drive Selection -->
         <div class="input-group">
             <label for="drive-size">Select Console / SSD Size</label>
             <select id="drive-size" onchange="calculateStorage()">
@@ -241,7 +308,6 @@
             <div class="game-item"><input type="checkbox" value="2" onchange="calculateStorage()"> Spotify App (2GB)</div>
         </div>
 
-        <!-- Results -->
         <div class="results-box">
             <div class="stats">
                 <span>Used: <span id="used-val">0</span> GB</span>
@@ -253,16 +319,29 @@
             <p id="status-text" style="text-align:center; font-weight:700;"></p>
         </div>
 
-        <!-- Affiliate Box -->
         <div id="recommendation-box">
-            <h3 style="margin:0;">⚠️ Storage Critically Low!</h3>
-            <p style="font-size:0.85rem;">You don't have enough room for these games. Upgrade your PS5 Pro with our top-rated 2TB SSD.</p>
-            <a href="https://amzn.to/3OFbITh" class="buy-button" target="_blank">View Recommended SSD</a>
+            <h3 style="margin:0;">⚠️ Storage Alert!</h3>
+            <p style="font-size:0.85rem;">You're running out of space. We recommend the Samsung 990 Pro for PS5 Pro.</p>
+            <a href="YOUR_AFFILIATE_LINK_HERE" class="buy-button" target="_blank">View Recommended SSD</a>
         </div>
     </div>
 
+    <section class="recommended-section">
+        <h3 class="section-title">Essential Storage Guides</h3>
+        <div class="article-grid">
+            <a href="articles/ssd-ps5.html" class="article-card">
+                <h4>Best PS5 SSDs 2026</h4>
+                <p>Top-rated internal drives for speed and capacity.</p>
+            </a>
+            <a href="articles/how-to-install-ps5-ssd.html" class="article-card">
+                <h4>How to Install SSD</h4>
+                <p>Step-by-step manual for the PS5 Pro expansion slot.</p>
+            </a>
+        </div>
+    </section>
+
     <footer>
-        &copy; 2026 The Hardware Manual - Independent PS5 Pro Testing
+        &copy; 2026 The Hardware Manual
     </footer>
 
     <script>
@@ -273,43 +352,26 @@
             const recommendationBox = document.getElementById('recommendation-box');
             
             let totalUsed = 0;
-            checkboxes.forEach(cb => {
-                if(cb.checked) {
-                    totalUsed += parseInt(cb.value);
-                }
-            });
+            checkboxes.forEach(cb => { if(cb.checked) totalUsed += parseFloat(cb.value); });
 
             let percent = (totalUsed / driveSize) * 100;
             let freeSpace = driveSize - totalUsed;
 
-            // Update Text
-            document.getElementById('used-val').innerText = totalUsed;
-            document.getElementById('free-val').innerText = freeSpace < 0 ? 0 : freeSpace;
-
-            // Update Progress Bar
+            document.getElementById('used-val').innerText = totalUsed.toFixed(0);
+            document.getElementById('free-val').innerText = freeSpace < 0 ? 0 : freeSpace.toFixed(0);
             progressBar.style.width = (percent > 100 ? 100 : percent) + "%";
             
-            if (percent > 90) {
+            if (percent > 85) {
                 progressBar.style.backgroundColor = "var(--accent-red)";
-                document.getElementById('status-text').innerText = "STORAGE FULL";
-                document.getElementById('status-text').style.color = "var(--accent-red)";
-                recommendationBox.style.display = "block";
-            } else if (percent > 70) {
-                progressBar.style.backgroundColor = "#f1c40f"; // Warning Yellow
-                document.getElementById('status-text').innerText = "Running Low...";
-                document.getElementById('status-text').style.color = "#f1c40f";
+                document.getElementById('status-text').innerText = "CRITICAL: UPGRADE NEEDED";
                 recommendationBox.style.display = "block";
             } else {
                 progressBar.style.backgroundColor = "var(--ps-light-blue)";
-                document.getElementById('status-text').innerText = "Plenty of Space";
-                document.getElementById('status-text').style.color = "var(--accent-green)";
+                document.getElementById('status-text').innerText = "Storage Healthy";
                 recommendationBox.style.display = "none";
             }
         }
-
-        // Run once on load
         calculateStorage();
     </script>
 </body>
 </html>
-
