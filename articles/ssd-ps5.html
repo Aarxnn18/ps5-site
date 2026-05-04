@@ -15,6 +15,43 @@
     <link rel="stylesheet" href="../style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
+
+    <!-- 1. JSON-LD HOWTO SCHEMA (Technical SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Install an M.2 SSD in a PS5 Pro",
+      "description": "Technical instructions for expanding PS5 Pro internal storage with a Gen4 NVMe SSD.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Ensure the PS5 Pro is fully powered off and unplugged before removing the outer cover."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Locate the expansion slot cover near the cooling fan and remove the cross-head screw."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Insert the M.2 SSD at a 45-degree angle into the terminal until it is firmly seated."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Secure the drive using the spacer and screw, then replace the expansion cover and console faceplate."
+        }
+      ],
+      "totalTime": "PT15M",
+      "supply": {
+        "@type": "HowToSupply",
+        "name": "M.2 Gen4 NVMe SSD with Heatsink"
+      },
+      "tool": {
+        "@type": "HowToTool",
+        "name": "#1 Phillips Head Screwdriver"
+      }
+    }
+    </script>
 </head>
 <body class="article-page">
     <div class="article-content">
@@ -35,6 +72,20 @@
         <section class="body-text">
             <h2>Expert Advice: The 2TB Shift</h2>
             <p>As of May 2026, the storage landscape has shifted. With the <strong>PS5 Pro priced at $899.99</strong> and featuring a 2TB internal drive, adding a 1TB expansion is no longer a logical upgrade. To justify opening your console, we now recommend a minimum of 4TB to accommodate the 200GB+ file sizes of modern "DirectStorage" titles like <em>GTA VI</em>.</p>
+
+            <!-- 2. STORAGE COMPATIBILITY CHECKLIST (Conversion UI) -->
+            <div style="background: #1a1a1a; border: 1px solid #0070d1; border-left: 8px solid #0070d1; padding: 25px; margin: 30px 0; border-radius: 4px;">
+                <h3 style="color: #0070d1; margin-top: 0; display: flex; align-items: center;">
+                    <span style="margin-right: 10px;">💾</span> NVMe Expansion Checklist
+                </h3>
+                <p style="color: #eee;">Verify these technical specs before purchasing your upgrade:</p>
+                <ul style="color: #ccc; line-height: 1.8;">
+                    <li><strong>Interface:</strong> PCIe Gen4 x4 M.2 NVMe SSD is required for PS5 Pro compatibility.</li>
+                    <li><strong>Thermal Management:</strong> A <a href="#universal-cooling" style="color: #0070d1; font-weight: bold;">Heatsink</a> is mandatory to prevent thermal throttling in the cramped bay.</li>
+                    <li><strong>Read Speed:</strong> Look for a minimum of 5,500 MB/s, though 7,000 MB/s+ is recommended for 2026 titles.</li>
+                    <li><strong>Form Factor:</strong> Ensure the drive width does not exceed 25mm (including the heatsink).</li>
+                </ul>
+            </div>
 
             <blockquote>
                 <strong>Heatsink Requirement:</strong> Every drive in this manual includes a pre-installed, low-profile heatsink. Do not attempt to run these high-bandwidth Gen4 drives without thermal protection in the PS5's cramped expansion bay.
@@ -88,6 +139,11 @@
             <p>The 990 Pro remains the king of random read/write speeds, which is critical for open-world asset streaming. In our 2026 testing, it showed the lowest latency during high-intensity PSSR upscaling sessions.</p>
             <a href="https://amzn.to/4djd27B" class="amazon-button" target="_blank" rel="nofollow">Check Samsung Price</a>
 
+            <!-- 3. HIGH-INTENT WARNING (Thermal Safety Trigger) -->
+            <div style="background: #ffcc0022; border: 1px solid #ffcc00; color: #fff; padding: 10px; margin: 20px 0; font-size: 0.9rem; border-radius: 4px;">
+                <strong>⚠️ Maintenance Tip:</strong> High-capacity Gen4 drives (4TB+) generate significant heat. If your console fan increases in volume immediately after installation, verify that your heatsink is properly making contact with the NAND chips.
+            </div>
+
             <h3>3. Seagate FireCuda 530 (4TB) - The High-Endurance Choice</h3>
             <p>The FireCuda 530 is rated for extreme endurance (TBW), making it ideal for power users who frequently download and delete massive 2026 titles. Its heatsink is one of the most efficient we've tested for the PS5 expansion slot.</p>
             <a href="https://amzn.to/4um3Q8b" class="amazon-button" target="_blank" rel="nofollow">Check FireCuda Price</a>
@@ -100,10 +156,17 @@
             <p>The T500 offers premium Gen4 speeds (7,100 MB/s) while pulling less power than the competition. This keeps the internal temperatures of your PS5 Pro lower, helping extend the life of your hardware during summer gaming.</p>
             <a href="https://amzn.to/4cYFk5U" class="amazon-button" target="_blank" rel="nofollow">Check Crucial Price</a>
 
-            <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; border-top: 4px solid #0070d1; margin-top: 40px;">
+            <div id="universal-cooling" style="background: #1a1a1a; padding: 25px; border-radius: 8px; border-top: 4px solid #0070d1; margin-top: 40px;">
                 <h3>Don't Forget: Universal Cooling</h3>
                 <p>If you are buying a drive that does <em>not</em> come with a heatsink, you must install one yourself. We recommend the <strong>Sabrent M.2 NVMe PS5 Heatsink</strong> as it replaces the standard console expansion cover for superior airflow.</p>
                 <a href="https://amzn.to/42NNBox" class="amazon-button" style="background: #333;">Buy Universal Sabrent Heatsink</a>
+            </div>
+
+            <!-- 4. ACTIVE CTA (Call to Action) -->
+            <div style="text-align: center; margin: 40px 0; border: 1px dashed #333; padding: 20px;">
+                <p style="margin-top: 0;"><strong>Need help with the physical installation?</strong></p>
+                <p>Follow our technical manual for a safe, step-by-step walkthrough of opening your PS5 Pro and seating your new drive.</p>
+                <a href="how-to-install-ps5-ssd.html" class="amazon-button" style="background: #0070d1; padding: 15px 30px; font-weight: bold;">Manual: Step-by-Step Installation</a>
             </div>
         </section>
 
@@ -123,4 +186,5 @@
     </footer>
 </body>
 </html>
+
 
