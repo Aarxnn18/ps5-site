@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,27 +14,37 @@
     <meta property="og:image" content="https://aarxnn18.github.io/ps5-site/images/ssd-hero.jpg" />
     <meta property="og:site_name" content="The Hardware Manual" />
 
-    <!-- JSON-LD Schema: Organization & WebSite -->
+    <!-- JSON-LD Schema: Combined Organization & WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "The Hardware Manual",
-      "url": "https://aarxnn18.github.io/ps5-site/",
-      "description": "The definitive technical manual for PS5 and PS5 Pro hardware, storage expansions, and peripheral maintenance.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Hardware Manual",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://aarxnn18.github.io/ps5-site/images/logo.png"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://aarxnn18.github.io/ps5-site/#organization",
+          "name": "The Hardware Manual",
+          "url": "https://aarxnn18.github.io/ps5-site/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://aarxnn18.github.io/ps5-site/images/logo.png"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://aarxnn18.github.io/ps5-site/#website",
+          "url": "https://aarxnn18.github.io/ps5-site/",
+          "name": "The Hardware Manual",
+          "description": "The definitive technical manual for PS5 and PS5 Pro hardware, storage expansions, and peripheral maintenance.",
+          "publisher": {
+            "@id": "https://aarxnn18.github.io/ps5-site/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://aarxnn18.github.io/ps5-site/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
         }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://aarxnn18.github.io/ps5-site/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      ]
     }
     </script>
 
@@ -77,7 +86,7 @@
         
         <h2 class="section-title">Core Hardware Buying Guides</h2>
         
-        <a href="articles/ssd-ps5.html" class="article-box" data-keywords="storage nvme expansion memory xspeed sn850x samsung heatsink m.2">
+        <a href="articles/ssd-ps5.html" class="article-box" data-keywords="storage nvme expansion memory speed sn850x samsung heatsink m.2">
             <img src="images/ssd-hero.jpg" class="box-image" alt="Best PS5 SSDs">
             <div class="box-text">
                 <h3>Best PS5 SSDs: 2026 Performance Analysis</h3>
